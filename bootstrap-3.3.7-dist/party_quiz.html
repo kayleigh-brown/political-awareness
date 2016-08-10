@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Democrat vs Republican</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="PA_style.css" rel="stylesheet">
+    <link type='text/css' rel='stylesheet' href='stylesheet.css'/>
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open Sans"/>
+  </head>
+
+
+  <body>
+    <!-- ==================================================== Navbar ======================================================= -->
+    
+    <!-- import functions to allow drop-menus -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+    <!-- sets top left heading of navbar to name of site (political awareness) -->
+    <nav class="navbar navbar-default navbar-static-top navbar-light bg-faded">
+      <a href="homepage.html" class="navbar-brand">Political Awareness</a>
+
+      <!-- opens up list of navbar links and sets them to right side of screen -->
+      <ul class="nav navbar-nav navbar-right">
+
+        <!-- sets first navbar item to election process link -->
+        <li class="nav-item">
+          <a class="nav-link" href="election_process.html">The Election Process<span class="sr-only">(current)</span></a>
+        </li>
+
+        <!-- sets second navbar item to to state voting link -->
+        <li class="nav-item">
+          <a class="nav-link" href="state_requirements.html">Voting by State<span class="sr-only">(current)</span></a>
+        </li>
+
+        <!-- sets third navbar item to candidates dropdown link -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" type="button">
+            About the Candidates <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+
+            <!-- links to hillary and trump pages (dropdown menu) -->
+            <li class="dropdown-header">Democrat and Republican Candidates</li>
+            <li><a href="about_clinton.html">Hillary Clinton</a></li>
+            <li><a href="about_trump.html">Donald Trump</a></li>
+
+            <!-- divider between main candidates and third party candidates -->
+            <li role="separator" class="divider"></li>
+
+            <!-- links to all third party candidates -->
+            <li class="dropdown-header">Third Party Candidates</li>
+            <li><a href="about_gary_johnson.html">Gary Johnson</a></li>
+            <li><a href="about_jill_stein.html">Jill Stein</a></li>
+            <li><a href="about_darrell_castle.html">Darrell Castle</a></li>
+          </ul> <!-- about the candidates dropdown-menu -->
+        </li> <!-- dropdown -->
+
+        <!-- sets fourth navbar item to another dropdown menu for quizzes -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            Quizzes <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+
+            <!-- links to all quizzes (dropdown menu) -->
+            <li><a href="party_quiz.html">Are You a Democrat or a Republican?</a></li>
+            <li><a href="candidate_quiz.html">Hillary Clinton or Donald Trump?</a></li>
+          </ul> <!-- quizzes dropdown-menu -->
+        </li> <!-- dropdown -->
+      </ul> <!-- navbar-right -->
+    </nav> <!-- navbar -->
+
+
+  <!-- ================================================ Begin Quiz ===================================================== -->
+    <div class ='container marketing'>
+      <div class="row featurette">
+        <div class="col-md-11">
+          <div id='title'>
+            <h1>Are You a Democrat or a Republican?</h1>
+            <h5>(30 Questions)</h5>
+          </div><!-- title -->
+          <br/>
+
+          <!-- prints the quiz functions (under main body) -->
+          <div id='quiz'></div><br><br>
+
+          <!-- adds previous, next, and start over buttons -->
+          <a class='prevbtn btn-lg btn-primary' role = "button" id='prev' href='#'>&lt;&lt; Prev</a>
+          <a class='nextbtn btn-lg btn-primary' role = "button" id='next' href='#'>Next &gt;&gt;</a><br><br><br>
+          <a class='startoverbtn btn-sm btn-primary' role = "button" id='start' href='#'>Start Over</a>
+
+          <!-- imports javascript files to actually make the quiz work -->
+          <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
+          <script type="text/javascript" src='questions.json'></script>
+          <script type='text/javascript' src='jsquiz.js'></script>
+        </div> <!-- col-md-11 -->
+      </div> <!-- row featurette -->
+    </div> <!-- container marketing -->
+  </body>
+</html>
+
+<!-- ================================================== QUIZ FUNCTIONS ================================================== -->
+<!-- sets a hash to store questions, answers, and counter variables -->
+<script type="text/javascript">(function() {
+  var questions = [
+    { question: "Should military spending be reduced in order to reduce the national debt?",
+      learnmore: "Currently projected U.S. military spending accounts for 54% of discretionary spending, valued at $598,500,000,000.<br><br>",
+      choices: ['&emsp;' + "Yes",'&emsp;' + "No",'&emsp;' + "Undecided"],
+      dAnswer: 0,
+      rAnswer: 1,
+      uAnswer: 2,
+    }, 
+    { question: "Should public sector spending be reduced to reduce the national debt?",
+      learnmore: "Public sector spending accounts for infrastructure, health, education, law maintenance, and other aspects of public care.<br><br>",
+      choices: ['&emsp;' + "Yes",'&emsp;' + "No",'&emsp;' + "Undecided"],
+      dAnswer: 1,
+      rAnswer: 0,
+      uAnswer: 2,
+    }, 
+    { question: "Should minimum wage be increased?",
+      learnmore: "Minimum wage is currently $7.25.<br><br>",
+      choices: ['&emsp;' + "Yes",'&emsp;' + "No",'&emsp;' + "Undecided"],
+      dAnswer: 0,
+      rAnswer: 1,
+      uAnswer: 2,
+    }, 
+    { question: "Should taxes on the wealthy be reduced?",
+      learnmore: "The average tax rate for those with an Adjusted Gross Income of over $250,000 pay an average of tax rate of 25.7%.<br><br>",
+      choices: ['&emsp;' + "Yes",'&emsp;' + "No",'&emsp;' + "Undecided"],
+      dAnswer: 1,
+      rAnswer: 0,
+      uAnswer: 2,
+    }, 
+    { question: "Should the government invest in renewable energy resources?",
+      learnmore: "Renewable energy resources include wind, solar, and hydropower.<br><br>",
+      choices: ['&emsp;' + "Yes",'&emsp;' + "No",'&emsp;' + "Undecided"],
+      dAnswer: 0,
+      rAnswer: 1,
+      uAnswer: 2,
+    }, 
+    { question: "Should the government fund Planned Parenthood?",
+      learnmore: "Planned Parenthood is a nonprofit organization that researches contraception, family planning, and reproductive problems. Some of the many services they offer include emergency contraception, breast cancer screening, pregnancy testing, STI testing, sex education, vasectomies, and abortions.<br><br>",
+      choices: ['&emsp;' + "Yes",'&emsp;' + "No",'&emsp;' + "Undecided"],
+      dAnswer: 0,
+      rAnswer: 1,
+      uAnswer: 2,
+    },  
+    { question: "Should the Affordable Care Act be repealed?",
+      learnmore: "The Affordable Care Act attempts to reform the healthcare system by extending insurance coverage, lowering premiums for qualifying families, adding new benefits, new rules for insurance companies, and tax breaks.<br><br>",
+      choices: ['&emsp;' + "Yes",'&emsp;' + "No",'&emsp;' + "Undecided"],
+      dAnswer: 1,
+      rAnswer: 0,
+      uAnswer: 2,
+    }, 
+    { question: "Should offshore oil drilling be increased in order to reduce foreign oil dependency?",
+      learnmore: "Offshore oil drilling refers to the process of extracting oil from beneath the seabed, a process which can contaminate water sources.<br><br>",
+      choices: ['&emsp;' + "Yes",'&emsp;' + "No",'&emsp;' + "Undecided"],
+      dAnswer: 1,
+      rAnswer: 0,
+      uAnswer: 2,
+    }, 
+    { question: "Should same-sex marriage be legal?",
+      choices: ['&emsp;' + "Yes",'&emsp;' + "No",'&emsp;' + "Undecided"],
+      dAnswer: 0,
+      rAnswer: 1,
+      uAnswer: 2,
+    },  
+    { question: "Should a business be able to deny a customer service if their request conflicts with the owner's religious beliefs?",
+      choices: ['&emsp;' + "Yes",'&emsp;' + "No",'&emsp;' + "Undecided"],
+      dAnswer: 1,
+      rAnswer: 0,
+      uAnswer: 2,
+    }, 
+    { question: "Do you support the use of hydraulic fracking to extract oil and natural gas resources?",
+      learnmore: "Hydraulic fracking is the process of pumping millions of gallons of water, sand, and chemicals underground to break apart rocks found at the bottom of natural gas wells.<br><br>",
+      choices: ['&emsp;' + "Yes",'&emsp;' + "No",'&emsp;' + "Undecided"],
+      dAnswer: 1,
+      rAnswer: 0,
+      uAnswer: 2,
+    }, 
+    { question: "Should the government increase environmental regulations to prevent climate change?",
+      choices: ['&emsp;' + "Yes",'&emsp;' + "No",'&emsp;' + "Undecided"],
+      dAnswer: 0,
+      rAnswer: 1,
+      uAnswer: 2,
+    },  
+    { question: "Should companies be required to provide paid leave to full-time employees due to illness of a family member or the birth of a child?",
+      choices: ['&emsp;' + "Yes",'&emsp;' + "No",'&emsp;' + "Undecided"],
+      dAnswer: 0,
+      rAnswer: 1,
+      uAnswer: 2,
+    }, 
+    { question: "Should all welfare recipients be tested for drugs?",
+      learnmore: "Welfare is a government program which provides money to support those in need.<br><br>",
+      choices: ['&emsp;' + "Yes",'&emsp;' + "No",'&emsp;' + "Undecided"],
+      dAnswer: 1,
+      rAnswer: 0,
+      uAnswer: 2,
+    }, 
+    { question: "Should the government reduce corporate income tax?",
+      learnmore: "Current corporate income tax varies anywhere from 15% to 39%.<br><br>",
+      choices: ['&emsp;' + "Yes",'&emsp;' + "No",'&emsp;' + "Undecided"],
+      dAnswer: 1,
+      rAnswer: 0,
+      uAnswer: 2,
+    },
+    { question: "Should the government place more restrictions on the process of gun ownership?",
+      choices: ['&emsp;' + "Yes",'&emsp;' + "No",'&emsp;' + "Undecided"],
+      dAnswer: 0,
+      rAnswer: 1,
+      uAnswer: 2,
+    }, 
+    { question: "Should the Senate hold hearings and a vote on President Obama's Supreme Court nominee?",
+      choices: ['&emsp;' + "Yes",'&emsp;' + "No",'&emsp;' + "Undecided"],
+      dAnswer: 0,
+      rAnswer: 1,
+      uAnswer: 2,
+    }, 
+    { question: "Should local police increase patrol and surveillance of Muslim neighborhoods?",
+      choices: ['&emsp;' + "Yes",'&emsp;' + "No",'&emsp;' + "Undecided"],
+      dAnswer: 1,
+      rAnswer: 0,
+      uAnswer: 2,
+    },  
+    { question: "Should taxes on the wealthy be increased in order to reduce interest on student loans?",
+      choices: ['&emsp;' + "Yes",'&emsp;' + "No",'&emsp;' + "Undecided"],
+      dAnswer: 0,
+      rAnswer: 1,
+      uAnswer: 2,
+    },  
+    { question: "Should corporations or unions (superPACs) be allowed to donate to political campaigns?",
+      choices: ['&emsp;' + "Yes",'&emsp;' + "No",'&emsp;' + "Undecided"],
+      dAnswer: 1,
+      rAnswer: 0,
+      uAnswer: 2,
+    },  
+    { question: "Should insurance providers be required to provide access to free birth control?",
+      choices: ['&emsp;' + "Yes",'&emsp;' + "No",'&emsp;' + "Undecided"],
+      dAnswer: 0,
+      rAnswer: 1,
+      uAnswer: 2,
+    }, 
+    { question: "Should children of illegal immigrants be granted legal citizenship?",
+      choices: ['&emsp;' + "Yes",'&emsp;' + "No",'&emsp;' + "Undecided"],
+      dAnswer: 0,
+      rAnswer: 1,
+      uAnswer: 2,
+    },
+    { question: "Should Apple unlock the phones of suspected terrorists for the FBI?",
+      choices: ['&emsp;' + "Yes",'&emsp;' + "No",'&emsp;' + "Undecided"],
+      dAnswer: 1,
+      rAnswer: 0,
+      uAnswer: 2,
+    },
+    { question: "Do you support the Patriot Act?",
+      learnmore: "The Patriot act was designed to enhance domestic security against terrorism. Passed after the attacks on 11 September 2001, this act broadens the powers of law-enforcement agencies (including the CIA, FBI, and NSA). The government is given the right to seize without warrant any 'tangible thing' that has reason to be affiliated with terrorism. Surveillance powers, both foreign and domestic, increased as well.<br><br>",
+      choices: ['&emsp;' + "Yes",'&emsp;' + "No",'&emsp;' + "Undecided"],
+      dAnswer: 1,
+      rAnswer: 0,
+      uAnswer: 2,
+    },
+    { question: "Should a photo ID be required to vote?",
+      choices: ['&emsp;' + "Yes",'&emsp;' + "No",'&emsp;' + "Undecided"],
+      dAnswer: 1,
+      rAnswer: 0,
+      uAnswer: 2,
+    },
+    { question: "Should the NSA be allowed to collect basic metadata of citizen's phone calls, including numbers, timestamps, and call durations?",
+      choices: ['&emsp;' + "Yes",'&emsp;' + "No",'&emsp;' + "Undecided"],
+      dAnswer: 1,
+      rAnswer: 0,
+      uAnswer: 2,
+    },
+    { question: "Should gender identity be added to anti-discrimination laws?",
+      choices: ['&emsp;' + "Yes",'&emsp;' + "No",'&emsp;' + "Undecided"],
+      dAnswer: 0,
+      rAnswer: 1,
+      uAnswer: 2,
+    },
+    { question: "Do you support Common Core education in schools?",
+      learnmore: "Common Core education is a program which details what students K-12 should know in language arts and mathematics by the end of the year. It is widely criticized as teaching to the 'lowest common denominator'.<br><br>",
+      choices: ['&emsp;' + "Yes",'&emsp;' + "No",'&emsp;' + "Undecided"],
+      dAnswer: 1,
+      rAnswer: 0,
+      uAnswer: 2,
+    },
+    { question: "Should drug use be decriminalized?",
+      choices: ['&emsp;' + "Yes",'&emsp;' + "No",'&emsp;' + "Undecided"],
+      dAnswer: 0,
+      rAnswer: 1,
+      uAnswer: 2,
+    },
+    { question: "Do you support affirmative action programs?",
+      learnmore: "Affirmative action programs attempt to ensure that all applicants and employees receive equal opportunity. These programs are specifically aimed at women and minorities, a fact which is controversially said to simply enhance current racist and sexist ideals.<br><br>",
+      choices: ['&emsp;' + "Yes",'&emsp;' + "No",'&emsp;' + "Undecided"],
+      dAnswer: 0,
+      rAnswer: 1,
+      uAnswer: 2,
+    }
+  ];
+  
+  var questionCounter = 0; //Tracks question number
+  var selections = []; //Array containing user choices
+  var quiz = $('#quiz'); //Quiz div object
+  var democrat = 0; //counts number of democratic answers
+  var republican = 0; //counts number of republican answers
+  var undecided = 0; //counts number of undecided answers
+  
+  // Display initial question
+  displayNext();
+  
+  // Click handler for the 'next' button
+  $('#next').on('click', function (e) {
+    e.preventDefault();
+    
+    // Suspend click listener during fade animation
+    if(quiz.is(':animated')) {        
+      return false;
+    }
+    choose();
+    
+    // If no user selection, progress is stopped
+    if (isNaN(selections[questionCounter])) {
+      alert('Please make a selection!');
+    } 
+    else {
+      questionCounter++;
+      displayNext();
+    }
+  });
+  
+  // Click handler for the 'prev' button
+  $('#prev').on('click', function (e) {
+    e.preventDefault();
+    
+    if(quiz.is(':animated')) {
+      return false;
+    }
+    choose();
+    questionCounter--;
+    displayNext();
+  });
+  
+  // Click handler for the 'Start Over' button
+  $('#start').on('click', function (e) {
+    e.preventDefault();
+    
+    if(quiz.is(':animated')) {
+      return false;
+    }
+    questionCounter = 0;
+    selections = [];
+    displayNext();
+    // $('#start').hide();
+    democrat = 0;
+    republican = 0;
+    undecided = 0;
+  });
+  
+  // Animates buttons on hover
+  $('.button').on('mouseenter', function () {
+    $(this).addClass('active');
+  });
+  $('.button').on('mouseleave', function () {
+    $(this).removeClass('active');
+  });
+  
+  // Creates and returns the div that contains the questions and 
+  // the answer selections
+  function createQuestionElement(index) {
+    var qElement = $('<div>', {
+      id: 'question'
+    });
+    
+    var header = $('<h2>Question ' + (index + 1) + ':</h2>');
+    qElement.append(header);
+    
+    var question = $('<p>').append(questions[index].question);
+    qElement.append(question);
+
+    var learnmore = $('<h5>').append(questions[index].learnmore);
+    qElement.append(learnmore);
+    
+    var radioButtons = createRadios(index);
+    qElement.append(radioButtons);
+    
+    return qElement;
+  }
+  
+  // Creates a list of the answer choices as radio inputs
+  function createRadios(index) {
+    var radioList = $('<ul style = "list-style-type: none">');
+    var item;
+    var input = '';
+    for (var i = 0; i < questions[index].choices.length; i++) {
+      item = $('<li style = "list-style-type: none">');
+      input = '<input type="radio" name="answer" value=' + i + ' />';
+      input += questions[index].choices[i];
+      item.append(input);
+      radioList.append(item);
+    }
+    return radioList;
+  }
+  
+  // Reads the user selection and pushes the value to an array
+  function choose() {
+    selections[questionCounter] = +$('input[name="answer"]:checked').val();
+  }
+  
+  // Displays next requested element
+  function displayNext() {
+    quiz.fadeOut(function() {
+      $('#question').remove();
+      
+      if(questionCounter < questions.length){
+        var nextQuestion = createQuestionElement(questionCounter);
+        quiz.append(nextQuestion).fadeIn();
+        if (!(isNaN(selections[questionCounter]))) {
+          $('input[value='+selections[questionCounter]+']').prop('checked', true);
+        }
+        
+        // Controls display of 'prev' button
+        if(questionCounter === 1){
+          $('#prev').show();
+        } else if(questionCounter === 0){
+          
+          $('#prev').hide();
+          $('#next').show();
+        }
+      }else {
+        var scoreElem = displayScore();
+        quiz.append(scoreElem).fadeIn();
+        $('#next').hide();
+        $('#prev').hide();
+        $('#start').show();
+      }
+    });
+  }
+  
+  // Computes score and returns a paragraph element to be displayed
+  function displayScore() {
+    var score = $('<p>',{id: 'question'});
+    
+    // increases counter values
+     var numCorrect = 0;
+     for (var i = 0; i < selections.length; i++) {
+       if (selections[i] === questions[i].dAnswer) {
+         democrat++;
+       }
+       else if (selections[i] === questions[i].rAnswer) {
+        republican++;
+       }
+       else {
+        undecided++;
+       }
+     }
+
+     // calculates final percentages
+     var percentDemocrat = Math.round((democrat / 30) * 100);
+     var percentRepublican = Math.round((republican / 30) * 100);
+     var percentUndecided = Math.round((undecided / 30) * 100);
+
+     // returns score
+      if (percentDemocrat > 99.9){
+        score.append('Your answers for these matters align 100% with the Democratic Party.');
+      }
+      else if (percentRepublican > 99.9){
+        score.append('Your answers for these matters align 100% with the Republican Party.');
+      }
+      else if (percentUndecided > 99.9) {
+        score.append('Your answers for these matters do not align with either the Democratic Party or the Republican Party.');
+      }
+      else if (percentUndecided == 0 && (percentDemocrat < 98 || percentRepublican < 98) ) {
+        score.append('Your answers for these matters align ' + percentDemocrat + '% with the Democratic Party and ' + percentRepublican + '% with the Republican Party.');
+      }
+      else if (percentUndecided != 0 && percentRepublican == 0) {
+        score.append('Your answers for these matters align ' + percentDemocrat + '% with the Democratic Party. Your answers on ' + percentUndecided + '% of these matters do not align with either candidate.');
+      }
+      else if (percentUndecided != 0 && percentDemocrat == 0) {
+        score.append('Your answers for these matters align ' + percentRepublican + '% with the Republican Party. Your answers on ' + percentUndecided + '% of these matters do not align with either candidate.');
+      }
+      else {
+        score.append('Your answers for these matters align ' + percentDemocrat + '% with the Democratic Party and ' + percentRepublican + '% with the Republican Party. Your answers on ' + percentUndecided + '% of these matters do not align with either party.');
+      }
+
+      return score; 
+  }
+})();</script>

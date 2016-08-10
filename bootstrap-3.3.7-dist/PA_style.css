@@ -1,0 +1,44 @@
+body {
+    padding-bottom: 3rem;
+    color: #5a5a5a;
+}
+body {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #373a3c;
+    background-color: #fff;
+}
+body {
+    margin: 0;
+}
+*, ::after, ::before {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+user agent stylesheet
+body {
+    display: block;
+    margin: 8px;
+}
+Inherited from html
+html {
+    font-size: 16px;
+    -ms-overflow-style: scrollbar;
+    -webkit-tap-highlight-color: transparent;
+}
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+/*Pseudo ::before element*/
+*, ::after, ::before {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+/*Pseudo ::after element*/
+*, ::after, ::before {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
