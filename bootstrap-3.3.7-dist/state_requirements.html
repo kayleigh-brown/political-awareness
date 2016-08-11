@@ -1,0 +1,1908 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Voting by State</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="PA_style.css" rel="stylesheet">
+</head>
+
+
+<body>
+	<!-- ==================================================== Navbar ======================================================= -->
+    
+    <!-- import functions to allow drop-menus -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+    <!-- sets top left heading of navbar to name of site (political awareness) -->
+    <nav class="navbar navbar-default navbar-static-top navbar-light bg-faded">
+      <a href="homepage.html" class="navbar-brand">Political Awareness</a>
+
+      <!-- opens up list of navbar links and sets them to right side of screen -->
+      <ul class="nav navbar-nav navbar-right">
+
+        <!-- sets first navbar item to election process link -->
+        <li class="nav-item">
+          <a class="nav-link" href="election_process.html">The Election Process<span class="sr-only">(current)</span></a>
+        </li>
+
+        <!-- sets second navbar item to to state voting link -->
+        <li class="nav-item">
+          <a class="nav-link" href="state_requirements.html">Voting by State<span class="sr-only">(current)</span></a>
+        </li>
+
+        <!-- sets third navbar item to candidates dropdown link -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" type="button">
+            About the Candidates <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+
+            <!-- links to hillary and trump pages (dropdown menu) -->
+            <li class="dropdown-header">Democrat and Republican Candidates</li>
+            <li><a href="about_clinton.html">Hillary Clinton</a></li>
+            <li><a href="about_trump.html">Donald Trump</a></li>
+
+            <!-- divider between main candidates and third party candidates -->
+            <li role="separator" class="divider"></li>
+
+            <!-- links to all third party candidates -->
+            <li class="dropdown-header">Third Party Candidates</li>
+            <li><a href="about_gary_johnson.html">Gary Johnson</a></li>
+            <li><a href="about_jill_stein.html">Jill Stein</a></li>
+            <li><a href="about_darrell_castle.html">Darrell Castle</a></li>
+          </ul> <!-- about the candidates dropdown-menu -->
+        </li> <!-- dropdown -->
+
+        <!-- sets fourth navbar item to another dropdown menu for quizzes -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            Quizzes <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+
+            <!-- links to all quizzes (dropdown menu) -->
+            <li><a href="party_quiz.html">Are You a Democrat or a Republican?</a></li>
+            <li><a href="candidate_quiz.html">Hillary Clinton or Donald Trump?</a></li>
+          </ul> <!-- quizzes dropdown-menu -->
+        </li> <!-- dropdown -->
+      </ul> <!-- navbar-right -->
+    </nav> <!-- navbar -->
+
+    <!-- ======================================= VOTING INFORMATION =============================================== -->
+    
+    <!-- Wraps the rest of the page in another container to center all the content. -->
+    <div class="container marketing">
+      
+    <!-- voting title -->
+      <div class="row featurette">
+        <div class="col-md-11">
+          <h1>Voting Requirements and Deadlines</h1>
+        </div> <!-- col-md-11 -->
+      </div> <!-- row featurette -->
+    
+    <!-- separating line between featurettes -->
+    <hr class = "featurette-divider">
+
+    <!-- select dropdown for states -->
+    <div class="row featurette">
+      <div class="col-md-11">
+
+        <h3>Select your state: </h3>
+        <select id="state-select" name="state-select" style="width: 150px;">
+          <!-- sets page links for each state option -->
+          <option value="#">---</option>
+          <option value="#AL">Alabama</option>
+          <option value="#AK">Alaska</option>
+          <option value="#AZ">Arizona</option>
+          <option value="#AR">Arkansas</option>
+          <option value="#CA">California</option>
+          <option value="#CO">Colorado</option>
+          <option value="#CT">Connecticut</option>
+          <option value="#DE">Delaware</option>
+          <option value="#FL">Florida</option>
+          <option value="#GA">Georgia</option>
+          <option value="#HI">Hawaii</option>
+          <option value="#ID">Idaho</option>
+          <option value="#IL">Illinois</option>
+          <option value="#IN">Indiana</option>
+          <option value="#IA">Iowa</option>
+          <option value="#KS">Kansas</option>
+          <option value="#KY">Kentucky</option>
+          <option value="#LA">Louisiana</option>
+          <option value="#ME">Maine</option>
+          <option value="#MD">Maryland</option>
+          <option value="#MA">Massachusetts</option>
+          <option value="#MI">Michigan</option>
+          <option value="#MN">Minnesota</option>
+          <option value="#MS">Mississippi</option>
+          <option value="#MO">Missouri</option>
+          <option value="#MT">Montana</option>
+          <option value="#NE">Nebraska</option>
+          <option value="#NV">Nevada</option>
+          <option value="#NH">New Hampshire</option>
+          <option value="#NJ">New Jersey</option>
+          <option value="#NM">New Mexico</option>
+          <option value="#NY">New York</option>
+          <option value="#NC">North Carolina</option>
+          <option value="#ND">North Dakota</option>
+          <option value="#OH">Ohio</option>
+          <option value="#OK">Oklahoma</option>
+          <option value="#OR">Oregon</option>
+          <option value="#PA">Pennsylvania</option>
+          <option value="#RI">Rhode Island</option>
+          <option value="#SC">South Carolina</option>
+          <option value="#SD">South Dakota</option>
+          <option value="#TN">Tennessee</option>
+          <option value="#TX">Texas</option>
+          <option value="#UT">Utah</option>
+          <option value="#VT">Vermont</option>
+          <option value="#VA">Virginia</option>
+          <option value="#WA">Washington</option>
+          <option value="#WV">West Virginia</option>
+          <option value="#WI">Wisconsin</option>
+          <option value="#WY">Wyoming</option>
+        </select>
+          
+        <!-- button that uses the page link from the state -->
+        <a class="findbtn btn-sm btn-primary" id="find-state" role = "button" href="#">Find State</a>
+
+        <!-- javascript function which assigns state link to find-state button -->
+        <script>
+          var state = document.getElementById('state-select');
+          state.onchange = function () {
+            document.getElementById("find-state").href = this.value;
+          }
+        </script>
+      </div> <!-- col-md-11 -->
+    </div> <!-- row featurettes -->
+
+    <!-- separating line between featurettes -->
+    <hr class = "featurette-divider">
+
+    <!-- START THE FEATURETTES -->
+
+    <!-- voting registration information -->
+    <div class="row featurette">
+      <div class="col-md-11">
+        <h2 class="featurette-heading">Registering to Vote<span class="text-muted"></span></h2>
+        <p class="lead">Registering to vote is an important process, because without a voter's registration you won't be able to vote in most states. There are several ways to get a voter's registration. Let's walk through each of them.<br><br>
+        <b>Voting Online</b><br>
+        Voting online is available for 31 states and the District of Columbia. <a href = "https://vote.usa.gov">Register to vote here.</a><br><br>
+        
+        <b>Voting In-Person</b><br>
+        To vote in person, download the <a href = "www.eac.gov/assets/1/Documents/national%20mail%20voter%20registration%20form%20english%20February%202015%2020111.pdf">National Mail Voter Registration Form</a>. Once this form is completed, remember to sign it before mailing it to the desired location for your state. You may also be able to register at your local <a href = "https://www.usa.gov/election-office">election office</a>, <a href = "https:www.usa.gov/motor-vehicle-services">DMV</a>, or military recruitment center.<br><br>
+
+        <b>Voting in Another Language</b><br>
+        Fill out the National Mail Voter Registration Form, available in <a href = "http://www.eac.gov/voter_resources/register_to_vote.aspx">other languages</a>.<br>
+        <a href = "http:www.eac.gov/voter_resources/a_voters_guide_to_federal_elections.aspx">Voter's guides</a> are also very helpful resources.
+        </p> <!-- lead -->
+      </div> <!-- col-md-11 -->
+    </div> <!-- row featurette -->
+
+    <!-- sets link for page jump -->
+    <a name = "AL"></a>
+    
+    <!-- separating line between featurettes -->
+    <hr class = "featurette-divider">
+
+    <!-- Alabama -->
+    <div class="row featurette">
+      <div class="col-md-11">
+        <div class = "col-md-7">
+          <h2 class="featurette-heading">Alabama<span class="text-muted">: AL</span></h2>
+          <p class="lead"><b>Voting Requirements</b><br>
+          &emsp;•&nbsp;You must be a US citizen<br>
+          &emsp;•&nbsp;You must be be living in an Alabama residence<br>
+          &emsp;•&nbsp;You must be at least 18 years old by Election Day<br>
+          &emsp;•&nbsp;You cannot have been convicted of a disqualifying felony<br>
+          &emsp;•&nbsp;You cannot have been declared mentally incompetent by a court<br><br>
+
+          <b>Voting Deadlines</b><br>
+          &emsp;•&nbsp;General Election: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Voter registration by: 24 October 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot request by: 3 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot returns by: 7 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Early in-person voting: not available
+          </p> <!-- lead -->
+        </div> <!-- col-md-7 -->
+
+        <!-- sets image to alabama flag -->
+        <img class="col-md-3" data-src="holder.js/500x500/auto" alt="Alabama" src="Images/Flags/flagalabama.png" data-holder-rendered="true">
+      </div> <!-- col-md-11 -->
+
+      <!-- include link to top of page -->
+      <h6 class="pull-xs-right"><a href="#">Back to top</a></h6>
+    </div> <!-- row featurette -->
+
+    <!-- sets link to page jump -->
+    <a name = "AK"></a>
+    
+    <!-- separating line between featurettes -->
+  	<hr class = "featurette-divider">
+
+    <!-- Alaska -->
+  	<div class="row featurette">
+      <div class="col-md-11">
+        <div class = "col-md-7">
+          <h2 class="featurette-heading">Alaska<span class="text-muted">: AK</span></h2>
+          <p class="lead"><b>Voting Requirements</b><br>
+          &emsp;•&nbsp;You must be a U.S. citizen<br>
+          &emsp;•&nbsp;You must be within 90 days of your 18th birthday by Election Day<br>
+          &emsp;•&nbsp;You must live in an Alaskan residence by 9 October 2016<br>
+          &emsp;•&nbsp;You may not be registered to vote in another state<br>
+          &emsp;•&nbsp;You may not have been convicted of certain felonies<br><br>
+
+          <b>Voting Deadlines</b><br>
+          &emsp;•&nbsp;State Primary Election: 16 August 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Voter registration by: 17 July 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot request by: 6 Aug 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot returns by: 16 Aug 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Early in-person voting: 1 August 2016 - 16 August 2016<br>
+          &emsp;•&nbsp;General Election: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Voter registration by: 9 October 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot requests by: 29 October 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot returns by: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Early in-person voting: 24 October 2016 - 8 November 2016
+          </p> <!-- lead -->
+        </div> <!-- col-md-7 -->
+
+        <!-- sets image to alaska flag -->
+        <img class="col-md-3" data-src="holder.js/500x500/auto" alt="Alaska" src="Images/Flags/flagalaska.png" data-holder-rendered="true">
+      </div> <!-- col-md-11 -->
+      <h6 class="pull-xs-right"><a href="#">Back to top</a></h6>
+    </div> <!-- row featurette -->
+
+    <!-- sets link for page jump -->
+    <a name = "AZ"></a>
+    
+    <!-- separating line between featurettes -->
+  	<hr class = "featurette-divider">
+
+  	<!-- Arizona -->
+    <div class="row featurette">
+      <div class="col-md-11">
+        <div class = "col-md-7">
+          <h2 class="featurette-heading">Arizona<span class="text-muted">: AZ</span></h2>
+          <p class="lead"><b>Voting Requirements</b><br>
+          &emsp;•&nbsp;You must be a U.S. citizen<br>
+          &emsp;•&nbsp;You must be a resident of Arizona<br>
+          &emsp;•&nbsp;You must be at least 18 years old by Election Day<br>
+          &emsp;•&nbsp;You may not have been convicted of treason or felony<br>
+          &emsp;•&nbsp;You may not have been declared mentally incapacitated by a court<br><br>
+
+          <b>Voting Deadlines</b><br>
+          &emsp;•&nbsp;State Primary Election: 30 August 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Voter registration by: 1 August 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot requests by: 19 August 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot returns by: 30 August 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Early in-person voting: 3 August 2016 - 30 August 2016<br>
+          &emsp;•&nbsp;General Election: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Voter registration by: 10 October 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot requests by: 28 October 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot returns by: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Early in-person voting: 12 October 2016 - 8 November 2016
+          </p>
+        </div>
+        <img class="col-md-3" data-src="holder.js/500x500/auto" alt="Arizona" src="Images/Flags/flagarizona.png" data-holder-rendered="true">
+      </div>
+      <h6 class="pull-xs-right"><a href="#">Back to top</a></h6>
+    </div> 
+
+    <!-- sets link for page jump -->
+    <a name = "AR"></a>
+    
+    <!-- separating line between featurettes -->
+  	<hr class = "featurette-divider">
+
+  	<!-- Arkansas -->
+  	<div class="row featurette">
+      <div class="col-md-11">
+        <div class = "col-md-7">
+          <h2 class="featurette-heading">Arkansas<span class="text-muted">: AR</span></h2>
+          <p class="lead"><b>Voting Requirements</b><br>
+          &emsp;•&nbsp;You must be a U.S. citizen<br>
+          &emsp;•&nbsp;You must live in an Arkansas residence by 9 October 2016<br>
+          &emsp;•&nbsp;You must be at least 18 years old by Election Day<br>
+          &emsp;•&nbsp;You may not be serving a sentence for a felony conviction<br>
+          &emsp;•&nbsp;You may not have been declared mentally incompetent by a court<br><br>
+
+          <b>Voting Deadlines</b><br>
+          &emsp;•&nbsp;General Election: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Voter registration by: 10 October 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot requests by:<br>
+          &emsp;&emsp;&emsp;&emsp;&emsp;•&nbsp;1 November 2016 if by post, fax, or email<br>
+          &emsp;&emsp;&emsp;&emsp;&emsp;•&nbsp;7 November 2016 if in-person<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot returns by: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Early in-person voting: 24 October 2016 - 7 November 2016
+          </p>
+        </div>
+        <img class="col-md-3" data-src="holder.js/500x500/auto" alt="Arkansas" src="Images/Flags/flagarkansas.png" data-holder-rendered="true">
+      </div>
+      <h6 class="pull-xs-right"><a href="#">Back to top</a></h6>
+    </div> 
+
+    <!-- sets link to page jump -->
+    <a name = "CA"></a>
+
+    <!-- separating line between featurettes -->
+  	<hr class = "featurette-divider">
+
+  	<!-- California -->
+  	<div class="row featurette">
+      <div class="col-md-11">
+        <div class = "col-md-7">
+          <h2 class="featurette-heading">California<span class="text-muted">: CA</span></h2>
+          <p class="lead"><b>Voting Requirements</b><br>
+          &emsp;•&nbsp;You must be a U.S. citizen<br>
+          &emsp;•&nbsp;You must live in a California residence<br>
+          &emsp;•&nbsp;You must be at least 18 years old by Election Day<br>
+          &emsp;•&nbsp;You may not be serving a sentence for a felony conviction<br>
+          &emsp;•&nbsp;You may not have been found mentally incompetent by court<br><br>
+
+          <b>Voting Deadlines</b><br>
+          &emsp;•&nbsp;General Election: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Voter registration by: 24 October 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot requests by: 1 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot returns by: 11 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Early in-person voting: 24 October 2016 - 9 November 2016<br>
+          </p>
+        </div>
+        <img class="col-md-3" data-src="holder.js/500x500/auto" alt="California" src="Images/Flags/flagcalifornia.png" data-holder-rendered="true">
+      </div>
+      <h6 class="pull-xs-right"><a href="#">Back to top</a></h6>
+    </div> 
+
+    <!-- sets link for page jump -->
+    <a name = "CO"></a>
+
+    <!-- separating line between featurettes -->
+  	<hr class = "featurette-divider">
+
+  	<!-- Colorado -->
+  	<div class="row featurette">
+      <div class="col-md-11">
+        <div class = "col-md-7">
+          <h2 class="featurette-heading">Colorado<span class="text-muted">: CO</span></h2>
+          <p class="lead"><b>Voting Requirements</b><br>
+          &emsp;•&nbsp;You must be a U.S. citizen<br>
+          &emsp;•&nbsp;You must be living in a Colorado address by 17 October 2016<br>
+          &emsp;•&nbsp;You must be at least 18 years of age by Election Day<br>
+          &emsp;•&nbsp;You may not be serving a sentence for a felony conviction<br>
+          &emsp;•&nbsp;You may not have been found incompetent by a court<br>
+          &emsp;•&nbsp;You may not claim the right to vote in another state<br><br>
+
+          <b>Voting Deadlines</b><br>
+          &emsp;•&nbsp;General Election: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Voter registration by: 31 October 2016<br>
+          &emsp;&emsp;&emsp;&emsp;&emsp;•&nbsp;Election Day registration is available<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot requests by: no request needed<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot returns by: 16 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Early in-person voting: 24 October 2016 - 8 November 2016
+          </p>
+        </div>
+        <img class="col-md-3" data-src="holder.js/500x500/auto" alt="Colorado" src="Images/Flags/flagcolorado.png" data-holder-rendered="true">
+      </div>
+      <h6 class="pull-xs-right"><a href="#">Back to top</a></h6>
+    </div> 
+
+    <!-- sets link for page jump -->
+    <a name = "CT"></a>
+
+    <!-- separating line between featurettes -->
+  	<hr class = "featurette-divider">
+
+  	<!-- Connecticut -->
+  	<div class="row featurette">
+      <div class="col-md-11">
+        <div class = "col-md-7">
+          <h2 class="featurette-heading">Connecticut<span class="text-muted">: CT</span></h2>
+          <p class="lead"><b>Voting Requirements</b><br>
+          &emsp;•&nbsp;You must be a U.S. citizen<br>
+          &emsp;•&nbsp;You must be living in a Connecticut address<br>
+          &emsp;•&nbsp;You must be at least 18 years old by Election Day<br>
+          &emsp;•&nbsp;You may not have been convicted of a felony<br>
+          &emsp;•&nbsp;You may not have been declared mentally incompetent by a court<br><br>
+
+          <b>Voting Deadlines</b><br>
+          &emsp;•&nbsp;State Primary Election: 9 August 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Voter registration by: 19 July 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot requests by: 8 August 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot returns by: 9 August 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Early in-person voting: not available<br>
+          &emsp;•&nbsp;General Election: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Voter registration by: 1 November 2016<br>
+          &emsp;&emsp;&emsp;&emsp;&emsp;•&nbsp;Election Day registration is available<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot requests by: 7 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot returns by: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Early in-person voting: not available
+          </p>
+        </div>
+        <img class="col-md-3" data-src="holder.js/500x500/auto" alt="Connecticut" src="Images/Flags/flagconnecticut.png" data-holder-rendered="true">
+      </div>
+      <h6 class="pull-xs-right"><a href="#">Back to top</a></h6>
+    </div> 
+
+    <!-- sets link for page jump -->
+    <a name = "DE"></a>
+
+    <!-- separating line between featurettes -->
+  	<hr class = "featurette-divider">
+
+  	<!-- Deleware -->
+  	<div class="row featurette">
+      <div class="col-md-11">
+        <div class = "col-md-7">
+          <h2 class="featurette-heading">Delaware<span class="text-muted">: DE</span></h2>
+          <p class="lead"><b>Voting Requirements</b><br>
+          &emsp;•&nbsp;You must be a U.S. citizen<br>
+          &emsp;•&nbsp;You must be a permanent resident of Deleware<br>
+          &emsp;•&nbsp;You must be at least 18 years old by Election Day<br>
+          &emsp;•&nbsp;You may not have been judged mentally incompetent by a court<br>
+          &emsp;•&nbsp;You may not have been convicted of a felony<br><br>
+
+          <b>Voting Deadlines</b><br>
+          &emsp;•&nbsp;State Primary Election: 13 September 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Voter registration by: 20 August 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot requests by: 12 September 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot returns by: 13 September 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Early in-person voting: not available<br>
+          &emsp;•&nbsp;General Election: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Voter registration by: 15 October 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot requests by: 7 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot returns by: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Early in-person voting: not available
+          </p>
+        </div>
+        <img class="col-md-3" data-src="holder.js/500x500/auto" alt="Delaware" src="Images/Flags/flagdelaware.png" data-holder-rendered="true">
+      </div>
+      <h6 class="pull-xs-right"><a href="#">Back to top</a></h6>
+    </div> 
+
+    <!-- sets link for page jump -->
+    <a name = "FL"></a>
+
+    <!-- separating line between featurettes -->
+  	<hr class = "featurette-divider">
+
+  	<!-- Florida -->
+  	<div class="row featurette">
+      <div class="col-md-11">
+        <div class = "col-md-7">
+          <h2 class="featurette-heading">Florida<span class="text-muted">: FL</span></h2>
+          <p class="lead"><b>Voting Requirements</b><br>
+          &emsp;•&nbsp;You must be a U.S. citizen<br>
+          &emsp;•&nbsp;You must be a Florida resident<br>
+          &emsp;•&nbsp;You must be at least 18 years old by Election Day<br>
+          &emsp;•&nbsp;You may not have been judged mentally incapacitated by a court<br>
+          &emsp;•&nbsp;You may not have been convicted of a felony<br><br>
+
+          <b>Voting Deadlines</b><br>
+          &emsp;•&nbsp;State Primary Election: 30 August 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Voter registration by: 1 August 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot requests by: 24 August 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot returns by: 30 August 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Early in-person voting: 20 August 2016 - 27 August 2016<br>
+          &emsp;•&nbsp;General Election: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Voter registration by: 11 October 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot requests by: 2 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot returns by: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Early in-person voting: 29 October 2016 - 5 November 2016
+          </p>
+        </div>
+        <img class="col-md-3" data-src="holder.js/500x500/auto" alt="Florida" src="Images/Flags/flagflorida.png" data-holder-rendered="true">
+      </div>
+      <h6 class="pull-xs-right"><a href="#">Back to top</a></h6>
+    </div> 
+
+    <!-- sets link for page jump -->
+    <a name = "GA"></a>
+
+    <!-- separating line between featurettes -->
+  	<hr class = "featurette-divider">
+
+    <!-- Georgia -->
+  	<div class="row featurette">
+      <div class="col-md-11">
+        <div class = "col-md-7">
+          <h2 class="featurette-heading">Georgia<span class="text-muted">: GA</span></h2>
+          <p class="lead"><b>Voting Requirements</b><br>
+          &emsp;•&nbsp;You must be a U.S. citizen<br>
+          &emsp;•&nbsp;You must be a resident of the county in which you're voting<br>
+          &emsp;•&nbsp;You must be at least 18 years of age by Election Day<br>
+          &emsp;•&nbsp;You may not have been convicted of a felony<br>
+          &emsp;•&nbsp;You may not have been found mentally incompetent by a judge<br><br>
+
+          <b>Voting Deadlines</b><br>
+          &emsp;•&nbsp;General Election: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Voter registration by: 11 October 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot requests by: 20 September 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot returns by: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Early in-person voting: 17 October 2016 - 8 November 2016
+          </p>
+        </div>
+        <img class="col-md-3" data-src="holder.js/500x500/auto" alt="Georgia" src="Images/Flags/flaggeorgia.png" data-holder-rendered="true">
+      </div>
+      <h6 class="pull-xs-right"><a href="#">Back to top</a></h6>
+    </div> 
+
+    <!-- sets link for page jump -->
+    <a name = "HI"></a>
+    
+    <!-- separating line between featurettes -->
+  	<hr class = "featurette-divider">
+
+    <!-- Hawaii -->
+  	<div class="row featurette">
+      <div class="col-md-11">
+        <div class = "col-md-7">
+          <h2 class="featurette-heading">Hawaii<span class="text-muted">: HI</span></h2>
+          <p class="lead"><b>Voting Requirements</b><br>
+          &emsp;•&nbsp;You must be a U.S. citizen<br>
+          &emsp;•&nbsp;You must be a resident of Hawaii<br>
+          &emsp;•&nbsp;You must be at least 18 years of age by Election Day<br>
+          &emsp;•&nbsp;You may not have been convicted of a felony<br>
+          &emsp;•&nbsp;You may not have been found mentally incompetent by a court<br><br>
+
+          <b>Voting Deadlines</b><br>
+          &emsp;•&nbsp;State Primary Election: 13 August 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Voter registration by: 14 July 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot requests by: 6 August 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot returns by: 13 August 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Early in-person voting: 1 August 2016 - 11 August 2016<br>
+          &emsp;•&nbsp;General Election: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Voter registration by: 10 October 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot requests by: 1 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot returns by: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Early in-person voting: 25 October 2016 - 5 November 2016
+          </p>
+        </div>
+        <img class="col-md-3" data-src="holder.js/500x500/auto" alt="Hawaii" src="Images/Flags/flaghawaii.png" data-holder-rendered="true">
+      </div>
+      <h6 class="pull-xs-right"><a href="#">Back to top</a></h6>
+    </div> 
+
+    <!-- sets link for page jump -->
+    <a name = "ID"></a>
+
+    <!-- separating line between featurettes -->
+  	<hr class = "featurette-divider">
+
+    <!-- Idaho -->
+  	<div class="row featurette">
+      <div class="col-md-11">
+        <div class = "col-md-7">
+          <h2 class="featurette-heading">Idaho<span class="text-muted">: ID</span></h2>
+          <p class="lead"><b>Voting Requirements</b><br>
+          &emsp;•&nbsp;You must be a U.S. citizen<br>
+          &emsp;•&nbsp;You must be living in an Idaho address by 9 October 2016<br>
+          &emsp;•&nbsp;You must be at least 18 years old by Election Day<br>
+          &emsp;•&nbsp;You may not have been convicted of a felony<br>
+          &emsp;•&nbsp;You may not currently be in prison<br><br>
+
+          <b>Voting Deadlines</b><br>
+          &emsp;•&nbsp;General Election: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Voter registration by: 14 October 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot requests by: 2 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot returns by: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Early in-person voting: 24 October 2016 - 4 November 2016
+          </p>
+        </div>
+        <img class="col-md-3" data-src="holder.js/500x500/auto" alt="Idaho" src="Images/Flags/flagidaho.png" data-holder-rendered="true">
+      </div>
+      <h6 class="pull-xs-right"><a href="#">Back to top</a></h6>
+    </div> 
+
+    <!-- sets link for page jump -->
+    <a name = "IL"></a>
+
+    <!-- separating line between featurettes -->
+  	<hr class = "featurette-divider">
+
+    <!-- Illinois -->
+  	<div class="row featurette">
+      <div class="col-md-11">
+        <div class = "col-md-7">
+          <h2 class="featurette-heading">Illinois<span class="text-muted">: IL</span></h2>
+          <p class="lead"><b>Voting Requirements</b><br>
+          &emsp;•&nbsp;You must be a U.S. citizen<br>
+          &emsp;•&nbsp;You must be living in the district you are voting in by 9 October 2016<br>
+          &emsp;•&nbsp;You must be at least 18 years of age by Election Day<br>
+          &emsp;•&nbsp;You may not have been convicted of a felony<br>
+          &emsp;•&nbsp;You may not claim the right to vote in another state<br><br>
+          
+          <b>Voting Deadlines</b><br>
+          &emsp;•&nbsp;General Election: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Voter registration by: 11 October 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot requests by:<br>
+          &emsp;&emsp;&emsp;&emsp;&emsp;•&nbsp;3 November 2016 if by post, fax, or email<br>
+          &emsp;&emsp;&emsp;&emsp;&emsp;•&nbsp;7 November 2016 if in peron<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot returns by: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Early in-person voting: 29 September 2016 - 7 November 2016
+          </p>
+        </div>
+        <img class="col-md-3" data-src="holder.js/500x500/auto" alt="Illinois" src="Images/Flags/flagillinois.png" data-holder-rendered="true">
+      </div>
+      <h6 class="pull-xs-right"><a href="#">Back to top</a></h6>
+    </div> 
+
+    <!-- sets link for page jump -->
+    <a name = "IN"></a>
+    
+    <!-- separating line between featurettes -->
+  	<hr class = "featurette-divider">
+
+    <!-- Indiana -->
+  	<div class="row featurette">
+      <div class="col-md-11">
+        <div class = "col-md-7">
+          <h2 class="featurette-heading">Indiana<span class="text-muted">: IN</span></h2>
+          <p class="lead"><b>Voting Requirements</b><br>
+          &emsp;•&nbsp;You must be a U.S. citizen<br>
+          &emsp;•&nbsp;You must be living in an Indiana address by 9 October 2016<br>
+          &emsp;•&nbsp;You must be at least 18 years of age by Election Day<br>
+          &emsp;•&nbsp;You may not have been convicted of a crime<br><br>
+
+          <b>Voting Deadlines</b><br>
+          &emsp;•&nbsp;General Election: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Voter registration by: 11 October 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot requests by: 31 October 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot returns by: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Early in-person voting: 11 October 2016 - 8 November 2016
+          </p>
+        </div>
+        <img class="col-md-3" data-src="holder.js/500x500/auto" alt="Indiana" src="Images/Flags/flagindiana.png" data-holder-rendered="true">
+      </div>
+      <h6 class="pull-xs-right"><a href="#">Back to top</a></h6>
+    </div> 
+
+    <!-- sets link for page jump -->
+    <a name = "IA"></a>
+
+    <!-- separating line between featurettes -->
+  	<hr class = "featurette-divider">
+
+    <!-- Iowa -->
+  	<div class="row featurette">
+      <div class="col-md-11">
+        <div class = "col-md-7">
+          <h2 class="featurette-heading">Iowa<span class="text-muted">: IA</span></h2>
+          <p class="lead"><b>Voting Requirements</b><br>
+          &emsp;•&nbsp;You must be a U.S. citizen<br>
+          &emsp;•&nbsp;You must be living in an Iowa address<br>
+          &emsp;•&nbsp;You must be at least 18 years old by Election Day<br>
+          &emsp;•&nbsp;You may not have been convicted of a felony<br>
+          &emsp;•&nbsp;You may not be found incompetent by a court<br><br>
+
+          <b>Voting Deadlines</b><br>
+          &emsp;•&nbsp;General Election: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Voter registration by: 29 October 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot requests by: 4 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot returns by: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Early in-person voting: varies by county<br>
+          &emsp;&emsp;&emsp;&emsp;&emsp;•&nbsp;Contact your local election office
+          </p>
+        </div>
+        <img class="col-md-3" data-src="holder.js/500x500/auto" alt="Iowa" src="Images/Flags/flagiowa.png" data-holder-rendered="true">
+      </div>
+      <h6 class="pull-xs-right"><a href="#">Back to top</a></h6>
+    </div> 
+
+    <!-- sets link for page jump -->
+    <a name = "KS"></a>
+
+    <!-- separating line between featurettes -->
+  	<hr class = "featurette-divider">
+
+    <!-- Kansas -->
+  	<div class="row featurette">
+      <div class="col-md-11">
+        <div class = "col-md-7">
+          <h2 class="featurette-heading">Kansas<span class="text-muted">: KS</span></h2>
+          <p class="lead"><b>Voting Requirements</b><br>
+          &emsp;•&nbsp;You must be a U.S. citizen<br>
+          &emsp;•&nbsp;You must be living at a Kansas address<br>
+          &emsp;•&nbsp;You must be at least 18 years old by Election Day<br>
+          &emsp;•&nbsp;You may not have been concivted of a felony<br><br>
+
+          <b>Voting Deadlines</b><br>
+          &emsp;•&nbsp;State Primary Election: 2 August 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Voter registration by: 12 July 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot requests by: 29 July 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot returns by: 2 August 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Early in-person voting: 26 July 2016 - 1 August 2016<br>
+          &emsp;•&nbsp;General Election: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Voter registration by: 18 October 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot requests by: 4 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot returns by: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Early in-person voting: 1 November 2016 - 8 November 2016
+          </p>
+        </div>
+        <img class="col-md-3" data-src="holder.js/500x500/auto" alt="Kansas" src="Images/Flags/flagkansas.svg" data-holder-rendered="true">
+      </div>
+      <h6 class="pull-xs-right"><a href="#">Back to top</a></h6>
+    </div> 
+
+    <!-- sets link for page jump -->
+    <a name = "KY"></a>
+
+    <!-- separating line between featurettes -->
+  	<hr class = "featurette-divider">
+
+    <!-- Kentucky -->
+  	<div class="row featurette">
+      <div class="col-md-11">
+        <div class = "col-md-7">
+          <h2 class="featurette-heading">Kentucky<span class="text-muted">: KY</span></h2>
+          <p class="lead"><b>Voting Requirements</b><br>
+          &emsp;•&nbsp;You must be a U.S. citizen<br>
+          &emsp;•&nbsp;You must be living in a Kentucky address by 11 October 2016<br>
+          &emsp;•&nbsp;You must be at least 18 years of age by Election Day<br>
+          &emsp;•&nbsp;You may not have been convicted of a felony<br>
+          &emsp;•&nbsp;You may not be currently judged as incompetent by a court<br>
+          &emsp;•&nbsp;You may not claim the right to vote in another state<br><br>
+
+          <b>Voting Deadlines</b><br>
+          &emsp;•&nbsp;General Election: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Voter registration by: 11 October 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot requests by: 1 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot returns by: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Early in-person voting: varies by county<br>
+          &emsp;&emsp;&emsp;&emsp;&emsp;•&nbsp;Contact your local election office
+          </p>
+          </p>
+        </div>
+        <img class="col-md-3" data-src="holder.js/500x500/auto" alt="Kentucky" src="Images/Flags/flagkentucky.png" data-holder-rendered="true">
+      </div>
+      <h6 class="pull-xs-right"><a href="#">Back to top</a></h6>
+    </div> 
+
+    <!-- sets link for page jump -->
+    <a name = "LA"></a>
+
+    <!-- separating line between featurettes -->
+  	<hr class = "featurette-divider">
+
+    <!-- Louisiana -->
+  	<div class="row featurette">
+      <div class="col-md-11">
+        <div class = "col-md-7">
+          <h2 class="featurette-heading">Louisiana<span class="text-muted">: LA</span></h2>
+          <p class="lead"><b>Voting Requirements</b><br>
+          &emsp;•&nbsp;You must be a U.S. citizen<br>
+          &emsp;•&nbsp;You must be living in a Louisiana address<br>
+          &emsp;•&nbsp;You must be at least 18 years old by Election Day<br>
+          &emsp;•&nbsp;You may not have been convicted of a felony<br>
+          &emsp;•&nbsp;You may not have been judged mentally incompetent by a court<br>
+          &emsp;•&nbsp;You may not have your voting rights suspended<br><br>
+
+          <b>Voting Deadlines</b><br>
+          &emsp;•&nbsp;General Election: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Voter registration by: 11 October 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot requests by: 4 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot returns by: 7 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Early in-person voting: 25 October 2016 - 1 November 2016
+          </p>
+        </div>
+        <img class="col-md-3" data-src="holder.js/500x500/auto" alt="Louisiana" src="Images/Flags/flaglouisiana.png" data-holder-rendered="true">
+      </div>
+      <h6 class="pull-xs-right"><a href="#">Back to top</a></h6>
+    </div> 
+
+    <!-- sets link for page jump -->
+    <a name = "ME"></a>
+
+    <!-- separating line between featurettes -->
+  	<hr class = "featurette-divider">
+
+    <!-- Maine -->
+  	<div class="row featurette">
+      <div class="col-md-11">
+        <div class = "col-md-7">
+          <h2 class="featurette-heading">Maine<span class="text-muted">: ME</span></h2>
+          <p class="lead"><b>Voting Requirements</b><br>
+          &emsp;•&nbsp;You must be a U.S. citizen<br>
+          &emsp;•&nbsp;You must have a residence in the municipality where you are voting<br>
+          &emsp;•&nbsp;You must be at least 18 years of age by Election Day<br><br>
+
+          <b>Voting Deadlines</b><br>
+          &emsp;•&nbsp;General Election: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Voter registration by: 18 October 2016<br>
+          &emsp;&emsp;&emsp;&emsp;&emsp;•&nbsp;Same day voter registration is available<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot requests by: 3 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot returns by: 18 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Early in-person voting: 27 October 2016 - 3 November 2016
+          </p>
+        </div>
+        <img class="col-md-3" data-src="holder.js/500x500/auto" alt="Maine" src="Images/Flags/flagmaine.png" data-holder-rendered="true">
+      </div>
+      <h6 class="pull-xs-right"><a href="#">Back to top</a></h6>
+    </div> 
+
+    <!-- sets link for page jump -->
+    <a name = "MD"></a>
+
+    <!-- separating line between featurettes -->
+  	<hr class = "featurette-divider">
+
+    <!-- Maryland -->
+  	<div class="row featurette">
+      <div class="col-md-11">
+        <div class = "col-md-7">
+          <h2 class="featurette-heading">Maryland<span class="text-muted">: MD</span></h2>
+          <p class="lead"><b>Voting Requirements</b><br>
+          &emsp;•&nbsp;You must be a U.S. citizen<br>
+          &emsp;•&nbsp;You must be a resident of Maryland on the day you register<br>
+          &emsp;•&nbsp;You may not have been convicted of a felony<br>
+          &emsp;•&nbsp;You may not be under the guardianship of mental disability<br>
+          &emsp;•&nbsp;You may not have been convicted of buying or selling votes<br><br>
+
+          <b>Voting Deadlines</b><br>
+          &emsp;•&nbsp;General Election: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Voter registration by: 18 October 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot requests by:<br>
+          &emsp;&emsp;&emsp;&emsp;&emsp;•&nbsp;1 November 2016 for ballot by mail<br>
+          &emsp;&emsp;&emsp;&emsp;&emsp;•&nbsp;4 November 2016 for electronic ballot<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot returns by: 18 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Early in-person voting: 27 October 2016 - 3 November 2016
+          </p>
+        </div>
+        <img class="col-md-3" data-src="holder.js/500x500/auto" alt="Maryland" src="Images/Flags/flagmaryland.png" data-holder-rendered="true">
+      </div>
+      <h6 class="pull-xs-right"><a href="#">Back to top</a></h6>
+    </div> 
+
+    <!-- sets link for page jump -->
+    <a name = "MA"></a>
+    
+    <!-- separating line between featurettes -->
+  	<hr class = "featurette-divider">
+
+    <!-- Massachusetts -->
+  	<div class="row featurette">
+      <div class="col-md-11">
+        <div class = "col-md-7">
+          <h2 class="featurette-heading">Massachusetts<span class="text-muted">: MA</span></h2>
+          <p class="lead"><b>Voting Requirements</b><br>
+          &emsp;•&nbsp;You must be a U.S. citizen<br>
+          &emsp;•&nbsp;You must be at least 18 years of age by Election Day<br>
+          &emsp;•&nbsp;You must live in a Massachusetts address<br>
+          &emsp;•&nbsp;You may not have been convicted of a felony<br>
+          &emsp;•&nbsp;You may not have been disqualified from voting for corrupt practice<br><br>
+
+          <b>Voting Deadlines</b><br>
+          &emsp;•&nbsp;State Primary Election: 8 September 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Voter registration by: 19 August 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot requests by: 7 September 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot returns by: 8 September 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Early in-person voting: not available<br>
+          &emsp;•&nbsp;General Election: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Voter registration by: 19 October 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot requests by: 7 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot returns by: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Early in-person voting: 24 October 2016 - 4 November 2016
+          </p>
+        </div>
+        <img class="col-md-3" data-src="holder.js/500x500/auto" alt="Massachusetts" src="Images/Flags/flagmassachusetts.png" data-holder-rendered="true">
+      </div>
+      <h6 class="pull-xs-right"><a href="#">Back to top</a></h6>
+    </div> 
+
+    <!-- sets link for page jump -->
+    <a name = "MI"></a>
+
+    <!-- separating line between featurettes -->
+  	<hr class = "featurette-divider">
+
+    <!-- Michigan -->
+  	<div class="row featurette">
+      <div class="col-md-11">
+        <div class = "col-md-7">
+          <h2 class="featurette-heading">Michigan<span class="text-muted">: MI</span></h2>
+          <p class="lead"><b>Voting Requirements</b><br>
+          &emsp;•&nbsp;You must be a U.S. citizen<br>
+          &emsp;•&nbsp;You must be at least 18 years old before Election Day<br>
+          &emsp;•&nbsp;You must be a resident of Michigan by 9 October<br>
+          &emsp;•&nbsp;You may not have been convicted of a felony<br><br>
+
+          <b>Voting Deadlines</b><br>
+          &emsp;•&nbsp;State Primary Election: 2 August 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Voter registration by: 5 July 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot requests by: 30 July 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot returns by: 2 August 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Early in-person voting: 20 June 2016 - 1 August 2016<br>
+          &emsp;•&nbsp;General Election: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Voter registration by: 11 October 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot requests by: 5 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot returns by: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Early in-person voting: 24 September 2016 - 7 November 2016
+          </p>
+        </div>
+        <img class="col-md-3" data-src="holder.js/500x500/auto" alt="Michigan" src="Images/Flags/flagmichigan.png" data-holder-rendered="true">
+      </div>
+      <h6 class="pull-xs-right"><a href="#">Back to top</a></h6>
+    </div> 
+
+    <!-- sets link for page jump -->
+    <a name = "MN"></a>
+
+    <!-- separating line between featurettes -->
+  	<hr class = "featurette-divider">
+
+    <!-- Minnesota -->
+  	<div class="row featurette">
+      <div class="col-md-11">
+        <div class = "col-md-7">
+          <h2 class="featurette-heading">Minnesota<span class="text-muted">: MN</span></h2>
+          <p class="lead"><b>Voting Requirements</b><br>
+          &emsp;•&nbsp;You must be a U.S. citizen<br>
+          &emsp;•&nbsp;You must be living in a Minnesota address by 19 October 2016<br>
+          &emsp;•&nbsp;You may not have been convicted of a felony<br>
+          &emsp;•&nbsp;You may not have been judged incompetent by a court<br><br>
+
+          <b>Voting Deadlines</b><br>
+          &emsp;•&nbsp;State Primary Election: 9 August 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Voter registration by: 19 July 2016<br>
+          &emsp;&emsp;&emsp;&emsp;&emsp;•&nbsp;Election Day registration is available<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot requests by: no deadline<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot returns by: 9 August 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Early in-person voting: 24 June 2016 - 8 August 2016<br>
+          &emsp;•&nbsp;General Election: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Voter registration by: 18 October 2016<br>
+          &emsp;&emsp;&emsp;&emsp;&emsp;•&nbsp;Election Day registration is available<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot requests by: no deadline<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot returns by: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Early in-person voting: 23 September 2016 - 7 November 2016
+          </p>
+        </div>
+        <img class="col-md-3" data-src="holder.js/500x500/auto" alt="Minnesota" src="Images/Flags/flagminnesota.png" data-holder-rendered="true">
+      </div>
+      <h6 class="pull-xs-right"><a href="#">Back to top</a></h6>
+    </div> 
+
+    <!-- sets link for page jump -->
+    <a name = "MS"></a>
+
+    <!-- separating line between featurettes -->
+  	<hr class = "featurette-divider">
+
+    <!-- Mississippi -->
+  	<div class="row featurette">
+      <div class="col-md-11">
+        <div class = "col-md-7">
+          <h2 class="featurette-heading">Mississippi<span class="text-muted">: MS</span></h2>
+          <p class="lead"><b>Voting Requirements</b><br>
+          &emsp;•&nbsp;You must be a U.S. citizen<br>
+          &emsp;•&nbsp;You must be at least 18 years old by Election Day<br>
+          &emsp;•&nbsp;You may not have been convicted of a felony<br>
+          &emsp;•&nbsp;You may not have been judged incompetent by a court<br><br>
+
+          <b>Voting Deadlines</b><br>
+          &emsp;•&nbsp;General Election: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Voter registration by: 8 October 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot requests by:<br>
+          &emsp;&emsp;&emsp;&emsp;&emsp;•&nbsp;5 November 2016 in-person<br>
+          &emsp;&emsp;&emsp;&emsp;&emsp;•&nbsp;7 November 2016 for post<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot returns by: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Early in-person voting: not available
+          </p>
+        </div>
+        <img class="col-md-3" data-src="holder.js/500x500/auto" alt="Mississippi" src="Images/Flags/flagmississippi.png" data-holder-rendered="true">
+      </div>
+      <h6 class="pull-xs-right"><a href="#">Back to top</a></h6>
+    </div> 
+
+    <!-- sets link for page jump -->
+    <a name = "MO"></a>
+
+    <!-- separating line between featurettes -->
+  	<hr class = "featurette-divider">
+
+    <!-- Missouri -->
+  	<div class="row featurette">
+      <div class="col-md-11">
+        <div class = "col-md-7">
+          <h2 class="featurette-heading">Missouri<span class="text-muted">: MO</span></h2>
+          <p class="lead"><b>Voting Requirements</b><br>
+          &emsp;•&nbsp;You must be a U.S. citizen<br>
+          &emsp;•&nbsp;You must be living in Missouri<br>
+          &emsp;•&nbsp;You must be at least 18 years of age by Election Day<br>
+          &emsp;•&nbsp;You must not be convicted of any offense connected voting<br>
+          &emsp;•&nbsp;You must not have been judged mentally incapacitated by a court<br>
+          &emsp;•&nbsp;You must not claim the right to vote in another state<br><br>
+
+          <b>Voting Deadlines</b><br>
+          &emsp;•&nbsp;State Primary Election: 2 August 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Voter registration by: 6 July 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot requests by: 27 July 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot returns by: 2 August 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Early in-person voting: not available<br>
+          &emsp;•&nbsp;General Election: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Voter registration by: 12 October 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot requests by: 2 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot returns by: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Early in-person voting: not available
+          </p>
+        </div>
+        <img class="col-md-3" data-src="holder.js/500x500/auto" alt="Missouri" src="Images/Flags/flagmissouri.png" data-holder-rendered="true">
+      </div>
+      <h6 class="pull-xs-right"><a href="#">Back to top</a></h6>
+    </div> 
+
+    <!-- sets link for page jump -->
+    <a name = "MT"></a>
+
+    <!-- separating line between featurettes -->
+  	<hr class = "featurette-divider">
+
+    <!-- Montana -->
+  	<div class="row featurette">
+      <div class="col-md-11">
+        <div class = "col-md-7">
+          <h2 class="featurette-heading">Montana<span class="text-muted">: MT</span></h2>
+          <p class="lead"><b>Voting Requirements</b><br>
+          &emsp;•&nbsp;You must be a U.S. citizen<br>
+          &emsp;•&nbsp;You must be at least 18 years old by Election Day<br>
+          &emsp;•&nbsp;You may not have been convicted of a felony<br>
+          &emsp;•&nbsp;You may not have been judged to have an unsound mind by a court<br>
+          &emsp;•&nbsp;You may not claim the right to vote elsewhere<br><br>
+
+          <b>Voting Deadlines</b><br>
+          &emsp;•&nbsp;General Election: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Voter registration by: 11 October 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot requests by: 7 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot returns by: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Early in-person voting: 10 October 2016 - 7 November 2016
+          </p>
+        </div>
+        <img class="col-md-3" data-src="holder.js/500x500/auto" alt="Montana" src="Images/Flags/flagmontana.png" data-holder-rendered="true">
+      </div>
+      <h6 class="pull-xs-right"><a href="#">Back to top</a></h6>
+    </div> 
+
+    <!-- sets link for page jump -->
+    <a name = "NE"></a>
+
+    <!-- separating line between featurettes -->
+  	<hr class = "featurette-divider">
+
+    <!-- Nebraska -->
+  	<div class="row featurette">
+      <div class="col-md-11">
+        <div class = "col-md-7">
+          <h2 class="featurette-heading">Nebraska<span class="text-muted">: NE</span></h2>
+          <p class="lead"><b>Voting Requirements</b><br>
+          &emsp;•&nbsp;You must be a U.S. citizen<br>
+          &emsp;•&nbsp;You must be a resident of Nebraska<br>
+          &emsp;•&nbsp;You must be at least 18 years of age by Election Day<br>
+          &emsp;•&nbsp;You must not have been convicted of a felony<br>
+          &emsp;•&nbsp;You must not have been judged mentally incompetent by a court<br><br>
+
+          <b>Voting Deadlines</b><br>
+          &emsp;•&nbsp;General Election: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Voter registration by: 21 October 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot requests by: 2 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot returns by: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Early in-person voting: 3 October 2016 - 7 November 2016
+          </p>
+        </div>
+        <img class="col-md-3" data-src="holder.js/500x500/auto" alt="Nebraska" src="Images/Flags/flagnebraska.png" data-holder-rendered="true">
+      </div>
+      <h6 class="pull-xs-right"><a href="#">Back to top</a></h6>
+    </div> 
+
+    <!-- sets link for page jump -->
+    <a name = "NV"></a>
+
+    <!-- separating line between featurettes -->
+  	<hr class = "featurette-divider">
+
+    <!-- Nevada -->
+  	<div class="row featurette">
+      <div class="col-md-11">
+        <div class = "col-md-7">
+          <h2 class="featurette-heading">Nevada<span class="text-muted">: NV</span></h2>
+          <p class="lead"><b>Voting Requirements</b><br>
+          &emsp;•&nbsp;You must be a U.S. citizen<br>
+          &emsp;•&nbsp;You must be a resident of Nevada by 9 October 2016<br>
+          &emsp;•&nbsp;You must be a resident of your precinct by 29 October 2016<br>
+          &emsp;•&nbsp;You must be at least 18 years old by Election Day<br>
+          &emsp;•&nbsp;You must not have been convicted of a felony<br>
+          &emsp;•&nbsp;You must not have been judged mentally incompetent by a court<br><br>
+
+          <b>Voting Deadlines</b><br>
+          &emsp;•&nbsp;General Election: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Voter registration by: 8 October 2016<br>
+          &emsp;&emsp;&emsp;&emsp;&emsp;•&nbsp;18 October 2016 if online or in-person<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot requests by: 1 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot returns by: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Early in-person voting: 22 October 2016 - 4 November 2016
+          </p>
+        </div>
+        <img class="col-md-3" data-src="holder.js/500x500/auto" alt="Nevada" src="Images/Flags/flagnevada.png" data-holder-rendered="true">
+      </div>
+      <h6 class="pull-xs-right"><a href="#">Back to top</a></h6>
+    </div> 
+
+    <!-- sets link for page jump -->
+    <a name = "NH"></a>
+
+    <!-- separating line between featurettes -->
+  	<hr class = "featurette-divider">
+
+    <!-- New Hampshire -->
+  	<div class="row featurette">
+      <div class="col-md-11">
+        <div class = "col-md-7">
+          <h2 class="featurette-heading">New Hampshire<span class="text-muted">: NH</span></h2>
+          <p class="lead"><b>Voting Requirements</b><br>
+          &emsp;•&nbsp;You must be a U.S. citizen<br>
+          &emsp;•&nbsp;You must be at least 18 years old by Election Day<br>
+          &emsp;•&nbsp;You must be a resident of New Hampshire<br>
+          &emsp;•&nbsp;You must not have been convicted of a felony<br>
+          &emsp;•&nbsp;You must not have been convicted of treason or bribery<br><br>
+
+          <b>Voting Deadlines</b><br>
+          &emsp;•&nbsp;State Primary Election: 13 September 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Voter registration by: 6 September 2016<br>
+          &emsp;&emsp;&emsp;&emsp;&emsp;•&nbsp;Last day to change party affiliation: 31 May 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot requests by: 12 September 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot returns by: 13 September 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Early in-person voting: not available<br>
+          &emsp;•&nbsp;General Election: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Voter registration by: 29 October 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot requests by: 7 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot returns by: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Early in-person voting: not available
+          </p>
+        </div>
+        <img class="col-md-3" data-src="holder.js/500x500/auto" alt="New Hampshire" src="Images/Flags/flagnewhampshire.png" data-holder-rendered="true">
+      </div>
+      <h6 class="pull-xs-right"><a href="#">Back to top</a></h6>
+    </div> 
+
+    <!-- sets link for page jump -->
+    <a name = "NJ"></a>
+
+    <!-- separating line between featurettes -->
+  	<hr class = "featurette-divider">
+
+    <!-- New Jersey -->
+  	<div class="row featurette">
+      <div class="col-md-11">
+        <div class = "col-md-7">
+          <h2 class="featurette-heading">New Jersey<span class="text-muted">: NJ</span></h2>
+          <p class="lead"><b>Voting Requirements</b><br>
+          &emsp;•&nbsp;You must be a U.S. citizen<br>
+          &emsp;•&nbsp;You must be at least 18 years of age by Election Day<br>
+          &emsp;•&nbsp;You must be a resident of New Jersey by 9 October 2016<br>
+          &emsp;•&nbsp;You must not have been convicted of a felony<br>
+          &emsp;•&nbsp;You must not be deprived of the right to vote for criminal conviction<br>
+          &emsp;•&nbsp;You must not have been judged mentally incompetent by a court<br><br>
+
+          <b>Voting Deadlines</b><br>
+          &emsp;•&nbsp;General Election: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Voter registration by: 18 October 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot requests by:<br>
+          &emsp;&emsp;&emsp;&emsp;&emsp;•&nbsp;1 November 2016 if by mail<br>
+          &emsp;&emsp;&emsp;&emsp;&emsp;•&nbsp;7 November 2016 if in-person<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot returns by: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Early in-person voting: not available
+          </p>
+        </div>
+        <img class="col-md-3" data-src="holder.js/500x500/auto" alt="New Jersey" src="Images/Flags/flagnewjersey.png" data-holder-rendered="true">
+      </div>
+      <h6 class="pull-xs-right"><a href="#">Back to top</a></h6>
+    </div> 
+
+    <!-- sets link for page jump -->
+    <a name = "NM"></a>
+
+    <!-- separating line between featurettes -->
+  	<hr class = "featurette-divider">
+
+    <!-- New Mexico -->
+  	<div class="row featurette">
+      <div class="col-md-11">
+        <div class = "col-md-7">
+          <h2 class="featurette-heading">New Mexico<span class="text-muted">: NM</span></h2>
+          <p class="lead"><b>Voting Requirements</b><br>
+          &emsp;•&nbsp;You must be a U.S. citizen<br>
+          &emsp;•&nbsp;You must be at least 18 years old by Election Day<br>
+          &emsp;•&nbsp;You must be a New Mexico resident<br>
+          &emsp;•&nbsp;You must not have been convicted of a felony<br>
+          &emsp;•&nbsp;You must not have been declared mentally incomepetent by a court<br><br>
+
+          <b>Voting Deadlines</b><br>
+          &emsp;•&nbsp;General Election: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Voter registration by: 11 October 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot requests by: 4 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot returns by: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Early in-person voting: 12 October 2016 - 8 November 2016
+          </p>
+        </div>
+        <img class="col-md-3" data-src="holder.js/500x500/auto" alt="New Mexico" src="Images/Flags/flagnewmexico.png" data-holder-rendered="true">
+      </div>
+      <h6 class="pull-xs-right"><a href="#">Back to top</a></h6>
+    </div> 
+
+    <!-- sets link for page jump -->
+    <a name = "NY"></a>
+
+    <!-- separating line between featurettes -->
+  	<hr class = "featurette-divider">
+
+    <!-- New York -->
+  	<div class="row featurette">
+      <div class="col-md-11">
+        <div class = "col-md-7">
+          <h2 class="featurette-heading">New York<span class="text-muted">: NY</span></h2>
+          <p class="lead"><b>Voting Requirements</b><br>
+          &emsp;•&nbsp;You must be a U.S. citizen<br>
+          &emsp;•&nbsp;You must be at least 18 years old by Election Day<br>
+          &emsp;•&nbsp;You must be a New York resident by 9 October 2016<br>
+          &emsp;•&nbsp;You may not have been convicted of a felony<br>
+          &emsp;•&nbsp;You may not have been declared mentally incompetent by a court<br>
+          &emsp;•&nbsp;You may not claim the right to vote in another state<br><br>
+
+          <b>Voting Deadlines</b><br>
+          &emsp;•&nbsp;State Primary Election: 13 September 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Voter registration by: 19 August 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot requests by: 12 September 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot returns by: 20 September 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Early in-person voting: not available<br>
+          &emsp;•&nbsp;General Election: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Voter registration by: 14 October 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot requests by: 7 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot returns by: 15 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Early in-person voting: not available
+          </p>
+        </div>
+        <img class="col-md-3" data-src="holder.js/500x500/auto" alt="New York" src="Images/Flags/flagnewyork.png" data-holder-rendered="true">
+      </div>
+      <h6 class="pull-xs-right"><a href="#">Back to top</a></h6>
+    </div> 
+
+    <!-- sets link for page jump -->
+    <a name = "NC"></a>
+
+    <!-- separating line between featurettes -->
+  	<hr class = "featurette-divider">
+
+    <!-- North Carolina -->
+  	<div class="row featurette">
+      <div class="col-md-11">
+        <div class = "col-md-7">
+          <h2 class="featurette-heading">North Carolina<span class="text-muted">: NC</span></h2>
+          <p class="lead"><b>Voting Requirements</b><br>
+          &emsp;•&nbsp;You must be a U.S. citizen<br>
+          &emsp;•&nbsp;You must be at least 18 years old by Election Day<br>
+          &emsp;•&nbsp;You must be a resident of North Carolina by 9 October 2016<br>
+          &emsp;•&nbsp;You must not have been convicted of a felony<br>
+          &emsp;•&nbsp;You may not claim the right to vote in another state<br><br>
+
+          <b>Voting Deadlines</b><br>
+          &emsp;•&nbsp;General Election: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Voter registration by: 14 October 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot requests by: 1 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot returns by: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Early in-person voting: 27 October 2016 - 5 November 2016
+          </p>
+        </div>
+        <img class="col-md-3" data-src="holder.js/500x500/auto" alt="North Carolina" src="Images/Flags/flagnorthcarolina.png" data-holder-rendered="true">
+      </div>
+      <h6 class="pull-xs-right"><a href="#">Back to top</a></h6>
+    </div> 
+
+    <!-- sets link for page jump -->
+    <a name = "ND"></a>
+
+    <!-- separating line between featurettes -->
+  	<hr class = "featurette-divider">
+
+    <!-- North Dakota -->
+  	<div class="row featurette">
+      <div class="col-md-11">
+        <div class = "col-md-7">
+          <h2 class="featurette-heading">North Dakota<span class="text-muted">: ND</span></h2>
+          <p class="lead"><b>Voting Requirements</b><br>
+          &emsp;•&nbsp;You must be a U.S. citizen<br>
+          &emsp;•&nbsp;You must be at least 18 years old by Election Day<br>
+          &emsp;•&nbsp;You must be a resident of North Dakota by 9 October 2016<br>
+          &emsp;•&nbsp;You may not have been convicted of a felony<br>
+          &emsp;•&nbsp;You may not have been declared mentally incompetent by a court<br><br>
+
+          <b>Voting Deadlines</b><br>
+          &emsp;•&nbsp;General Election: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Voter registration by: no voter registration required<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot requests by: 7 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot returns by: 7 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Early in-person voting: contact your local election office
+          </p>
+        </div>
+        <img class="col-md-3" data-src="holder.js/500x500/auto" alt="North Dakota" src="Images/Flags/flagnorthdakota.png" data-holder-rendered="true">
+      </div>
+      <h6 class="pull-xs-right"><a href="#">Back to top</a></h6>
+    </div> 
+
+    <!-- sets link for page jump -->
+    <a name = "OH"></a>
+
+    <!-- separating line between featurettes -->
+  	<hr class = "featurette-divider">
+
+    <!-- Ohio -->
+  	<div class="row featurette">
+      <div class="col-md-11">
+        <div class = "col-md-7">
+          <h2 class="featurette-heading">Ohio<span class="text-muted">: OH</span></h2>
+          <p class="lead"><b>Voting Requirements</b><br>
+          &emsp;•&nbsp;You must be a U.S. citizen<br>
+          &emsp;•&nbsp;You must be a resident of Ohio by 9 October 2016<br>
+          &emsp;•&nbsp;You must be at least 18 years old by Election Day<br>
+          &emsp;•&nbsp;You may not have been convicted of a felony<br>
+          &emsp;•&nbsp;You may not have been declared mentally incompetent by a court<br>
+          &emsp;•&nbsp;You must not be disqualified for violating an election law<br><br>
+
+          <b>Voting Deadlines</b><br>
+          &emsp;•&nbsp;General Election: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Voter registration by: 11 October 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot requests by: 5 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot returns by: 18 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Early in-person voting: 12 October 2016 - 7 November 2016
+          </p>
+        </div>
+        <img class="col-md-3" data-src="holder.js/500x500/auto" alt="Ohio" src="Images/Flags/flagohio.png" data-holder-rendered="true">
+      </div>
+      <h6 class="pull-xs-right"><a href="#">Back to top</a></h6>
+    </div> 
+
+    <!-- sets link for page jump -->
+    <a name = "OK"></a>
+    
+    <!-- separating line between featurettes -->
+  	<hr class = "featurette-divider">
+
+    <!-- Oklahoma -->
+  	<div class="row featurette">
+      <div class="col-md-11">
+        <div class = "col-md-7">
+          <h2 class="featurette-heading">Oklahoma<span class="text-muted">: OK</span></h2>
+          <p class="lead"><b>Voting Requirements</b><br>
+          &emsp;•&nbsp;You must be a U.S. citizen<br>
+          &emsp;•&nbsp;You must be an Oklahoma resident by 14 October 2016<br>
+          &emsp;•&nbsp;You must be at least 18 years of age by Election Day<br>
+          &emsp;•&nbsp;You must not have been convicted of a felony<br>
+          &emsp;•&nbsp;You must not have been declared mentally incompetent by a court<br><br>
+
+          <b>Voting Deadlines</b><br>
+          &emsp;•&nbsp;General Election: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Voter registration by: 14 October 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot requests by: 2 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot returns by: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Early in-person voting: 3-5 November 2016 from 8am-6pm
+          </p>
+        </div>
+        <img class="col-md-3" data-src="holder.js/500x500/auto" alt="Oklahoma" src="Images/Flags/flagoklahoma.png" data-holder-rendered="true">
+      </div>
+      <h6 class="pull-xs-right"><a href="#">Back to top</a></h6>
+    </div> 
+
+    <!-- sets link for page jump -->
+    <a name = "OR"></a>
+
+    <!-- separating line between featurettes -->
+  	<hr class = "featurette-divider">
+
+    <!-- Oregon -->
+  	<div class="row featurette">
+      <div class="col-md-11">
+        <div class = "col-md-7">
+          <h2 class="featurette-heading">Oregon<span class="text-muted">: OR</span></h2>
+          <p class="lead"><b>Voting Requirements</b><br>
+          &emsp;•&nbsp;You must be a U.S. citizen<br>
+          &emsp;•&nbsp;You must be a resident of Oregon by 18 October 2016<br>
+          &emsp;•&nbsp;You must be at leat 18 years of age by Election Day<br>
+          &emsp;•&nbsp;You must not have been convicted of a felony<br>
+          &emsp;•&nbsp;You must not have been declared mentally incompetent by a court<br><br>
+
+          <b>Voting Deadlines</b><br>
+          &emsp;•&nbsp;General Election: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Voter registration by: 18 October 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot requests by: 3 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot returns by: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Early in-person voting: not available
+          </p>
+        </div>
+        <img class="col-md-3" data-src="holder.js/500x500/auto" alt="Oregon" src="Images/Flags/flagoregon.png" data-holder-rendered="true">
+      </div>
+      <h6 class="pull-xs-right"><a href="#">Back to top</a></h6>
+    </div> 
+
+    <!-- sets link for page jump -->
+    <a name = "PA"></a>
+
+    <!-- separating line between featurettes -->
+  	<hr class = "featurette-divider">
+
+    <!-- Pennsylvania -->
+  	<div class="row featurette">
+      <div class="col-md-11">
+        <div class = "col-md-7">
+          <h2 class="featurette-heading">Pennsylvania<span class="text-muted">: PA</span></h2>
+          <p class="lead"><b>Voting Requirements</b><br>
+          &emsp;•&nbsp;You must be a U.S. citizen<br>
+          &emsp;•&nbsp;You must be at least 18 years of age by Election Day<br>
+          &emsp;•&nbsp;You must be a resident of Pennsylvania by 9 October 2016<br>
+          &emsp;•&nbsp;You must not have been convicted of a felony<br><br>
+
+          <b>Voting Deadlines</b><br>
+          &emsp;•&nbsp;General Election: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Voter registration by: 11 October 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot requests by: 1 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot returns by: 4 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Early in-person voting: not available
+          </p>
+        </div>
+        <img class="col-md-3" data-src="holder.js/500x500/auto" alt="Pennsylvania" src="Images/Flags/flagpennsylvania.png" data-holder-rendered="true">
+      </div>
+      <h6 class="pull-xs-right"><a href="#">Back to top</a></h6>
+    </div> 
+
+    <!-- sets link for page jump -->
+    <a name = "RI"></a>
+
+    <!-- separating line between featurettes -->
+  	<hr class = "featurette-divider">
+
+    <!-- Rhode Island -->
+  	<div class="row featurette">
+      <div class="col-md-11">
+        <div class = "col-md-7">
+          <h2 class="featurette-heading">Rhode Island<span class="text-muted">: RI</span></h2>
+          <p class="lead"><b>Voting Requirements</b><br>
+          &emsp;•&nbsp;You must be a U.S. citizen<br>
+          &emsp;•&nbsp;You must be at least 18 years of age on Election Day<br>
+          &emsp;•&nbsp;You must be a resident of Rhode Island by 9 October 2016<br>
+          &emsp;•&nbsp;You must not have been convicted of a felony<br>
+          &emsp;•&nbsp;You must not have been declared mentally incompetent by a court<br><br>
+
+          <b>Voting Deadlines</b><br>
+          &emsp;•&nbsp;State Primary Election: 13 September 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Voter registration by: 14 August 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot requests by: 23 August 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot returns by: 13 September 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Early in-person voting: not available<br>
+          &emsp;•&nbsp;General Election: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Voter registration by: 9 October 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot requests by: 18 October 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot returns by: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Early in-person voting: not available
+          </p>
+        </div>
+        <img class="col-md-3" data-src="holder.js/500x500/auto" alt="Rhode Island" src="Images/Flags/flagrhodeisland.gif" data-holder-rendered="true">
+      </div>
+      <h6 class="pull-xs-right"><a href="#">Back to top</a></h6>
+    </div> 
+
+    <!-- sets link for page jump -->
+    <a name = "SC"></a>
+    
+    <!-- separating line between featurettes -->
+  	<hr class = "featurette-divider">
+
+    <!-- South Carolina -->
+  	<div class="row featurette">
+      <div class="col-md-11">
+        <div class = "col-md-7">
+          <h2 class="featurette-heading">South Carolina<span class="text-muted">: SC</span></h2>
+          <p class="lead"><b>Voting Requirements</b><br>
+          &emsp;•&nbsp;You must be a U.S. citizen<br>
+          &emsp;•&nbsp;You must be at least 18 years of age by Election Day<br>
+          &emsp;•&nbsp;You must be a resident of South Carolina<br>
+          &emsp;•&nbsp;You must not have been convicted of a felony<br>
+          &emsp;•&nbsp;You must not have been declared mentally incompetent by a court<br>
+          &emsp;•&nbsp;You must not have been convicted for violating an election law<br><br>
+
+          <b>Voting Deadlines</b><br>
+          &emsp;•&nbsp;General Election: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Voter registration by: 8 October 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot requests by: 4 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot returns by: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Early in-person voting: 10 October 2016 - 7 November 2016
+          </p>
+        </div>
+        <img class="col-md-3" data-src="holder.js/500x500/auto" alt="South Carolina" src="Images/Flags/flagsouthcarolina.png" data-holder-rendered="true">
+      </div>
+      <h6 class="pull-xs-right"><a href="#">Back to top</a></h6>
+    </div> 
+
+    <!-- sets link for page jump -->
+    <a name = "SD"></a>
+
+    <!-- separating line between featurettes -->
+  	<hr class = "featurette-divider">
+
+    <!-- South Dakota -->
+  	<div class="row featurette">
+      <div class="col-md-11">
+        <div class = "col-md-7">
+          <h2 class="featurette-heading">South Dakota<span class="text-muted">: SD</span></h2>
+          <p class="lead"><b>Voting Requirements</b><br>
+          &emsp;•&nbsp;You must be a U.S. citizen<br>
+          &emsp;•&nbsp;You must be a resident of South Dakota<br>
+          &emsp;•&nbsp;You must be at least 18 years of age by Election Day<br>
+          &emsp;•&nbsp;You must not have been convicted of a felony<br>
+          &emsp;•&nbsp;You must not have been declared mentally incompetent by a court<br><br>
+
+          <b>Voting Deadlines</b><br>
+          &emsp;•&nbsp;General Election: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Voter registration by: 24 October 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot requests by: 7 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot returns by: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Early in-person voting: 24 September 2016 - 7 November 2016
+          </p>
+        </div>
+        <img class="col-md-3" data-src="holder.js/500x500/auto" alt="South Dakota" src="Images/Flags/flagsouthdakota.png" data-holder-rendered="true">
+      </div>
+      <h6 class="pull-xs-right"><a href="#">Back to top</a></h6>
+    </div> 
+
+    <!-- sets link for page jump -->
+    <a name = "TN"></a>
+
+    <!-- separating line between featurettes -->
+  	<hr class = "featurette-divider">
+
+    <!-- Tennessee -->
+  	<div class="row featurette">
+      <div class="col-md-11">
+        <div class = "col-md-7">
+          <h2 class="featurette-heading">Tennessee<span class="text-muted">: TN</span></h2>
+          <p class="lead"><b>Voting Requirements</b><br>
+          &emsp;•&nbsp;You must be a U.S. citizen<br>
+          &emsp;•&nbsp;You must be at least 18 years of age by Election Day<br>
+          &emsp;•&nbsp;You must be a resident of Tennessee<br>
+          &emsp;•&nbsp;You must not have been convicted of a felony<br>
+          &emsp;•&nbsp;You must not have been declared mentally incompetent by a court<br><br>
+
+          <b>Voting Deadlines</b><br>
+          &emsp;•&nbsp;State Primary Election: 4 August 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Voter registration by: 5 July 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot requests by: 28 July 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot returns by: 4 August 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Early in-person voting: 15 July 2016 - 30 July 2016<br>
+          &emsp;•&nbsp;General Election: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Voter registration by: 11 October 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot requests by: 1 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot returns by: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Early in-person voting: 19 October 2016 - 3 November 2016
+          </p>
+        </div>
+        <img class="col-md-3" data-src="holder.js/500x500/auto" alt="Tennessee" src="Images/Flags/flagtennessee.png" data-holder-rendered="true">
+      </div>
+      <h6 class="pull-xs-right"><a href="#">Back to top</a></h6>
+    </div> 
+
+    <!-- sets link for page jump -->
+    <a name = "TX"></a>
+
+    <!-- separating line between featurettes -->
+    <hr class = "featurette-divider">
+
+    <!-- Texas -->
+    <div class="row featurette">
+      <div class="col-md-11">
+        <div class = "col-md-7">
+          <h2 class="featurette-heading">Texas<span class="text-muted">: TX</span></h2>
+          <p class="lead"><b>Voting Requirements</b><br>
+          &emsp;•&nbsp;You must be a U.S. citizen<br>
+          &emsp;•&nbsp;You must be at least 18 years old by Election Day<br>
+          &emsp;•&nbsp;You must be a Texas resident<br>
+          &emsp;•&nbsp;You must not have been convicted of a felony<br>
+          &emsp;•&nbsp;You must not have been declared mentally incompetent by a court<br><br>
+
+          <b>Voting Deadlines</b><br>
+          &emsp;•&nbsp;General Election: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Voter registration by: 11 October 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot requests by: 28 October 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot returns by: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Early in-person voting: 24 October 2016 - 4 November 2016
+          </p>
+        </div>
+        <img class="col-md-3" data-src="holder.js/500x500/auto" alt="Texas" src="Images/Flags/flagtexas.png" data-holder-rendered="true">
+      </div>
+      <h6 class="pull-xs-right"><a href="#">Back to top</a></h6>
+    </div> 
+
+    <!-- sets link for page jump -->
+    <a name = "UT"></a>
+
+    <!-- separating line between featurettes -->
+  	<hr class = "featurette-divider">
+
+    <!-- Utah -->
+  	<div class="row featurette">
+      <div class="col-md-11">
+        <div class = "col-md-7">
+          <h2 class="featurette-heading">Utah<span class="text-muted">: UT</span></h2>
+          <p class="lead"><b>Voting Requirements</b><br>
+          &emsp;•&nbsp;You must be a U.S. citizen<br>
+          &emsp;•&nbsp;You must be at least 18 years of age by Election Day<br>
+          &emsp;•&nbsp;You must be a resident of Utah by 9 October 2016<br>
+          &emsp;•&nbsp;You must not have been convicted of a felony<br><br>
+
+          <b>Voting Deadlines</b><br>
+          &emsp;•&nbsp;General Election: 9 August 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Voter registration by:<br>
+          &emsp;&emsp;&emsp;&emsp;&emsp;•&nbsp;11 October 2016 if in post<br>
+          &emsp;&emsp;&emsp;&emsp;&emsp;•&nbsp;1 November 2016 if online or in-person<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot requests by: 3 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot returns by: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Early in-person voting: 25 October 2016 - 4 November 2016<br>
+          
+          </p>
+        </div>
+        <img class="col-md-3" data-src="holder.js/500x500/auto" alt="Utah" src="Images/Flags/flagutah.png" data-holder-rendered="true">
+      </div>
+      <h6 class="pull-xs-right"><a href="#">Back to top</a></h6>
+    </div> 
+
+    <!-- sets link for page jump -->
+    <a name = "VT"></a>
+
+    <!-- separating line between featurettes -->
+  	<hr class = "featurette-divider">
+
+    <!-- Vermont -->
+  	<div class="row featurette">
+      <div class="col-md-11">
+        <div class = "col-md-7">
+          <h2 class="featurette-heading">Vermont<span class="text-muted">: VT</span></h2>
+          <p class="lead"><b>Voting Requirements</b><br>
+          &emsp;•&nbsp;You must be a U.S. citizen<br>
+          &emsp;•&nbsp;You must be at least 18 years of age by Election Day<br>
+          &emsp;•&nbsp;You must be a resident of Vermont<br>
+          &emsp;•&nbsp;You must take the Voter's Oath<br><br>
+
+          <b>Voting Deadlines</b><br>
+          &emsp;•&nbsp;State Primary Election: 9 August 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Voter registration by: 11 July 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot requests by: 8 August 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot returns by: 9 August 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Early in-person voting: 26 June 2016 - 8 August 2016<br>
+          &emsp;•&nbsp;General Election: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Voter registration by: 2 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot requests by: 7 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot returns by: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Early in-person voting: 25 September 2016 - 7 November 2016
+          </p>
+        </div>
+        <img class="col-md-3" data-src="holder.js/500x500/auto" alt="Vermont" src="Images/Flags/flagvermont.png" data-holder-rendered="true">
+      </div>
+      <h6 class="pull-xs-right"><a href="#">Back to top</a></h6>
+    </div> 
+
+    <!-- sets link for page jump -->
+    <a name = "VA"></a>
+
+    <!-- separating line between featurettes -->
+  	<hr class = "featurette-divider">
+
+    <!-- Virginia -->
+  	<div class="row featurette">
+      <div class="col-md-11">
+        <div class = "col-md-7">
+          <h2 class="featurette-heading">Virginia<span class="text-muted">: VA</span></h2>
+          <p class="lead"><b>Voting Requirements</b><br>
+          &emsp;•&nbsp;You must be a U.S. citizen<br>
+          &emsp;•&nbsp;You must be at least 18 years old by Election Day<br>
+          &emsp;•&nbsp;You must be a resident of Virginia<br>
+          &emsp;•&nbsp;You must not have been convicted of a felony<br>
+          &emsp;•&nbsp;You must not have been judged mentally incompetent by a court<br>
+          &emsp;•&nbsp;You must not claim the right to vote in another state<br><br>
+
+          <b>Voting Deadlines</b><br>
+          &emsp;•&nbsp;General Election: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Voter registration by: 17 October 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot requests by: 1 November 2016<br>
+          &emsp;&emsp;&emsp;&emsp;&emsp;•&nbsp;5 November 2016 if in-person<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot returns by: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Early in-person voting: not available
+          </p>
+        </div>
+        <img class="col-md-3" data-src="holder.js/500x500/auto" alt="Virginia" src="Images/Flags/flagvirginia.png" data-holder-rendered="true">
+      </div>
+      <h6 class="pull-xs-right"><a href="#">Back to top</a></h6>
+    </div> 
+
+    <!-- sets link for page jump -->
+    <a name = "WA"></a>
+    
+    <!-- separating line between featurettes -->
+  	<hr class = "featurette-divider">
+
+    <!-- Washington -->
+  	<div class="row featurette">
+      <div class="col-md-11">
+        <div class = "col-md-7">
+          <h2 class="featurette-heading">Washington<span class="text-muted">: WA</span></h2>
+          <p class="lead"><b>Voting Requirements</b><br>
+          &emsp;•&nbsp;You must be a U.S. citizen<br>
+          &emsp;•&nbsp;You must be at least 18 years of age by Election Day<br>
+          &emsp;•&nbsp;You must be a resident of Washington by 9 October 2016<br>
+          &emsp;•&nbsp;You must not have been convicted of a felony<br>
+          &emsp;•&nbsp;You must not have been judged mentally incompetent by a court<br>
+          &emsp;•&nbsp;You must not claim the right to vote in another state<br><br>
+
+          <b>Voting Deadlines</b><br>
+          &emsp;•&nbsp;State Primary Election: 2 August 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Voter registration by:<br>
+          &emsp;&emsp;&emsp;&emsp;&emsp;•&nbsp;4 July 2016 if by mail or online<br>
+          &emsp;&emsp;&emsp;&emsp;&emsp;•&nbsp;25 July 2016 if in-person<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot requests by: not applicable<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot returns by: not applicable<br>
+          &emsp;&emsp;&emsp;•&nbsp;Early in-person voting: not available<br>
+          &emsp;•&nbsp;General Election: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Voter registration by:<br>
+          &emsp;&emsp;&emsp;&emsp;&emsp;•&nbsp;10 October 2016 if by mail or online<br>
+          &emsp;&emsp;&emsp;&emsp;&emsp;•&nbsp;31 October 2016 if in-person<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot requests by: not applicable<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot returns by: not applicable<br>
+          &emsp;&emsp;&emsp;•&nbsp;Early in-person voting: not available
+        </div>
+        <img class="col-md-3" data-src="holder.js/500x500/auto" alt="Washington" src="Images/Flags/flagwashington.png" data-holder-rendered="true">
+      </div>
+      <h6 class="pull-xs-right"><a href="#">Back to top</a></h6>
+    </div> 
+
+    <!-- sets link for page jump -->
+    <a name = "WV"></a>
+
+    <!-- separating line between featurettes -->
+  	<hr class = "featurette-divider">
+
+    <!-- West Virginia -->
+  	<div class="row featurette">
+      <div class="col-md-11">
+        <div class = "col-md-7">
+          <h2 class="featurette-heading">West Virginia<span class="text-muted">: WV</span></h2>
+          <p class="lead"><b>Voting Requirements</b><br>
+          &emsp;•&nbsp;You must be a U.S. citizen<br>
+          &emsp;•&nbsp;You must be at least 18 years old by Election Day<br>
+          &emsp;•&nbsp;You must be a resident of West Virgina<br>
+          &emsp;•&nbsp;You must not have been convicted of a felony<br>
+          &emsp;•&nbsp;You must not have been convicted of treason or bribery<br>
+          &emsp;•&nbsp;You must not have been declared mentally incompetent by a court<br>
+          &emsp;•&nbsp;You must not claim the right to vote in another state<br><br>
+
+          <b>Voting Deadlines</b><br>
+          &emsp;•&nbsp;General Election: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Voter registration by: 18 October 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot requests by: 2 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot returns by: 18 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Early in-person voting: 26 October 2016 - 5 November 2016
+          </p>
+        </div>
+        <img class="col-md-3" data-src="holder.js/500x500/auto" alt="West Virginia" src="Images/Flags/flagwestvirginia.png" data-holder-rendered="true">
+      </div>
+      <h6 class="pull-xs-right"><a href="#">Back to top</a></h6>
+    </div> 
+
+    <!-- sets link for page jump -->
+    <a name = "WI"></a>
+    
+    <!-- separating line between featurettes -->
+  	<hr class = "featurette-divider">
+
+    <!-- Wisconsin -->
+  	<div class="row featurette">
+      <div class="col-md-11">
+        <div class = "col-md-7">
+          <h2 class="featurette-heading">Wisconsin<span class="text-muted">: WI</span></h2>
+          <p class="lead"><b>Voting Requirements</b><br>
+          &emsp;•&nbsp;You must be a U.S. citizen<br>
+          &emsp;•&nbsp;You must be at least 18 years old by Election Day<br>
+          &emsp;•&nbsp;You must be a resident of Wisconsin by 11 October 2016<br>
+          &emsp;•&nbsp;You must not have been convicted of a felony<br>
+          &emsp;•&nbsp;You must not have been judged as mentally incompetent by a court<br>
+          &emsp;•&nbsp;You must not claim the right to vote in another state<br>
+          &emsp;•&nbsp;You must not be involved in a bet over the outcome of the election<br><br>
+
+          <b>Voting Deadlines</b><br>
+          &emsp;•&nbsp;State Primary Election: 9 August 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Voter registration by: 5 August 2016<br>
+          &emsp;&emsp;&emsp;&emsp;&emsp;•&nbsp;Election Day registration is available<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot requests by: 4 August 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot returns by: 12 August 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Early in-person voting: 25 July 2016 - 5 August 2016<br>
+          &emsp;•&nbsp;General Election: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Voter registration by: 19 October 2016<br>
+          &emsp;&emsp;&emsp;&emsp;&emsp;•&nbsp;4 November 2016 if in-person<br>
+          &emsp;&emsp;&emsp;&emsp;&emsp;•&nbsp;Election Day registration is available<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot requests by: 3 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot returns by: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Early in-person voting: 24 October 2016 - 4 November 2016
+          </p>
+        </div>
+        <img class="col-md-3" data-src="holder.js/500x500/auto" alt="Wisconsin" src="Images/Flags/flagwisconsin.png" data-holder-rendered="true">
+      </div>
+      <h6 class="pull-xs-right"><a href="#">Back to top</a></h6>
+    </div> 
+
+  	<!-- sets link for page jump -->
+    <a name = "WY"></a>
+    
+    <!-- separating line between featurettes -->
+  	<hr class = "featurette-divider">
+
+    <!-- Wyoming -->
+  	<div class="row featurette">
+      <div class="col-md-11">
+        <div class = "col-md-7">
+          <h2 class="featurette-heading">Wyoming<span class="text-muted">: WY</span></h2>
+          <p class="lead"><b>Voting Requirements</b><br>
+          &emsp;•&nbsp;You must be a U.S. citizen<br>
+          &emsp;•&nbsp;You must be at least 18 years old by Election Day<br>
+          &emsp;•&nbsp;You must be a resident of Wyoming<br>
+          &emsp;•&nbsp;You must not have been convicted of a felony<br>
+          &emsp;•&nbsp;You must not have been declared mentally incompetent by a court<br><br>
+
+          <b>Voting Deadlines</b><br>
+          &emsp;•&nbsp;State Primary Election: 16 August 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Voter registration by: 1 August 2016<br>
+          &emsp;&emsp;&emsp;&emsp;&emsp;•&nbsp;Election Day registration is available<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot requests by: 15 August 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot returns by: 16 August 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Early in-person voting: 8 July 2016 - 16 August 2016<br>
+          &emsp;•&nbsp;General Election: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Voter registration by: 24 October 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot requests by: 7 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Absentee ballot returns by: 8 November 2016<br>
+          &emsp;&emsp;&emsp;•&nbsp;Early in-person voting: 30 September 2016 - 8 November 2016
+          </p>
+        </div>
+        <img class="col-md-3" data-src="holder.js/500x500/auto" alt="Wyoming" src="Images/Flags/flagwyoming.png" data-holder-rendered="true">
+      </div>
+      <h6 class="pull-xs-right"><a href="#">Back to top</a></h6>
+    </div> 
+
+    <!-- separating line between featurettes -->
+  	<hr class = "featurette-divider">
+
+    <!-- /END THE FEATURETTES -->
+
+
+    <!-- FOOTER -->
+    <footer>
+      <h6 class="pull-xs-right"><a href="#">Back to top</a></h6>
+      <h6>&copy; 2016 Girls Who Code <!--&middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a>--></h6>
+    </footer>
+
+  </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
+<!--     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+ -->    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="../../assets/js/vendor/holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+</body>
+</html>

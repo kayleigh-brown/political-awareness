@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <!-- sets tab heading -->
+    <title>Political Awareness</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="PA_style.css" rel="stylesheet">
+  </head>
+
+
+  <body>
+    <!-- ==================================================== Navbar ======================================================= -->
+    
+    <!-- import functions to allow drop-menus -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+    <!-- sets top left heading of navbar to name of site (political awareness) -->
+    <nav class="navbar navbar-default navbar-static-top navbar-light bg-faded">
+      <a href="homepage.html" class="navbar-brand">Political Awareness</a>
+
+      <!-- opens up list of navbar links and sets them to right side of screen -->
+      <ul class="nav navbar-nav navbar-right">
+
+        <!-- sets first navbar item to election process link -->
+        <li class="nav-item">
+          <a class="nav-link" href="election_process.html">The Election Process<span class="sr-only">(current)</span></a>
+        </li>
+
+        <!-- sets second navbar item to to state voting link -->
+        <li class="nav-item">
+          <a class="nav-link" href="state_requirements.html">Voting by State<span class="sr-only">(current)</span></a>
+        </li>
+
+        <!-- sets third navbar item to candidates dropdown link -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" type="button">
+            About the Candidates <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+
+            <!-- links to hillary and trump pages (dropdown menu) -->
+            <li class="dropdown-header">Democrat and Republican Candidates</li>
+            <li><a href="about_clinton.html">Hillary Clinton</a></li>
+            <li><a href="about_trump.html">Donald Trump</a></li>
+
+            <!-- divider between main candidates and third party candidates -->
+            <li role="separator" class="divider"></li>
+
+            <!-- links to all third party candidates -->
+            <li class="dropdown-header">Third Party Candidates</li>
+            <li><a href="about_gary_johnson.html">Gary Johnson</a></li>
+            <li><a href="about_jill_stein.html">Jill Stein</a></li>
+            <li><a href="about_darrell_castle.html">Darrell Castle</a></li>
+          </ul> <!-- about the candidates dropdown-menu -->
+        </li> <!-- dropdown -->
+
+        <!-- sets fourth navbar item to another dropdown menu for quizzes -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            Quizzes <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+
+            <!-- links to all quizzes (dropdown menu) -->
+            <li><a href="party_quiz.html">Are You a Democrat or a Republican?</a></li>
+            <li><a href="candidate_quiz.html">Hillary Clinton or Donald Trump?</a></li>
+          </ul> <!-- quizzes dropdown-menu -->
+        </li> <!-- dropdown -->
+      </ul> <!-- navbar-right -->
+    </nav> <!-- navbar -->
+
+
+
+    <!-- =============================================== Carousel ======================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      
+      <!-- Indicators - small circle indexes underneath carousel pictures -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1" class></li>
+        <li data-target="#myCarousel" data-slide-to="2" class></li>
+        <li data-target="#myCarousel" data-slide-to="3" class></li>
+        <li data-target="#myCarousel" data-slide-to="4" class></li>
+        <li data-target="#myCarousel" data-slide-to="5" class></li>
+      </ol> <!-- carousel-indicators -->
+      
+      <!-- sets up class to contain carousel pictures -->
+      <div class="carousel-inner" role="listbox">  
+
+      <!-- sets the first carousel image to presidential election -->
+        <div class="item active">
+          <center><img class="first-slide" src="Images/election.png" alt="2016 electoral predictions"></center>
+          <div class="container">
+            <div class="carousel-caption">
+              <p>The current major election in the United States is the 2016 Presidential Election, with candidates Hillary Clinton for the Democratic Party, Donald Trump for the Republican Party, Jill Stein for the Green Party, Gary Johnson for the Libertarian Party, and Darrell Castle for the Constitution Party.</p>
+           </div> <!-- carousel-caption -->
+          </div> <!-- container -->
+        </div> <!-- item active -->
+        
+        <!-- sets the second carousel image to DNC -->
+        <div class="item">
+          <center><img class="second-slide" src="Images/DNC.png" alt="Democratic donkey"></center>
+          <div class="container">
+            <div class="carousel-caption">
+
+              <!-- formats paragraph to include a button with no header -->
+              <div class = "demnoheader">
+                <p>The Democratic National Convention officially saw Hillary Clinton receive the Democratic Party nomination. Speakers included Bernie Sanders, Barack Obama, Michelle Obama, Bill Clinton, Hillary Clinton, and Joe Biden.</p>
+              </div> <!-- demnoheader -->
+
+              <!-- adds button that links to the DNC homepage -->
+              <p><a class="democratbtn btn-lg btn-primary" href="https://www.demconvention.com" role="button">Learn more</a></p>
+            </div> <!-- carousel-caption -->
+          </div> <!-- container -->
+        </div> <!-- item -->
+
+        <!-- sets third carousel image to RNC -->
+        <div class="item">
+          <center><img class="third-slide" src="Images/rnc.png" alt="Democratic elephant" align = "middle"></center>
+          <div class="container">
+            <div class="carousel-caption">
+
+              <!-- formats paragraph to include a button with no header -->
+              <div class = "repnoheader">
+                <p>The Republican National Convention officially saw Donald Trump receive the Republican Party nomination. Speakers included Ted Cruz, Scott Walker, Donald Trump, and Melania Trump.  </p>
+              </div> <!-- repnoheader -->
+
+              <!-- adds button that links to the RNC homepage -->
+              <p><a class="republicanbtn btn-lg btn-primary" href="http://convention.gop" role="button">Learn more</a></p>
+            </div> <!-- carousel-caption -->
+          </div> <!-- container -->
+        </div> <!-- item -->
+
+        <!-- sets the fourth carousel image to GPNC -->
+        <div class="item">
+          <center><img class="fourth-slide" src="Images/gp_convention.png" alt="2016 electoral predictions"></center>
+          <div class="container">
+            <div class="carousel-caption">
+              <p>The Green Party National Convention officially saw Jill Stein receive the Green Party nomination. Speakers included Dr. Cornel West and YahNé Ndgo.</p>
+            </div> <!-- carousel-caption -->
+          </div> <!-- container -->
+        </div> <!-- item -->
+
+      <!-- sets the fifth carousel image to CPNC -->
+        <div class="item">
+          <center><img class="fifth-slide" src="Images/cp_convention.png" alt="2016 electoral predictions"></center>
+          <div class="container">
+            <div class="carousel-caption">
+              <p>The Constitution Party National Convention officially saw Darrell Castle receive the Constitution Party nomination. Speakers included Darrell Castle, Scott N. Bradley, and Bryce Hamilton.</p>
+            </div> <!-- carousel-caption -->
+          </div> <!-- container -->
+        </div> <!-- item -->
+
+      <!-- sets the sixth carousel image to LPNC -->
+        <div class="item">
+          <center><img class="sixth-slide" src="Images/lp_convention.png" alt="2016 electoral predictions"></center>
+          <div class="container">
+            <div class="carousel-caption">
+              <p>The Libertarian Party National Convention officially saw Gary Johnson receive the Libertarian Party nomination. Speakers included Adam Kokesh, Michele Poague, Major Neill Franklin.</p>
+            </div> <!-- carousel-caption -->
+          </div> <!-- container -->
+        </div> <!-- item -->
+      </div> <!-- carousel-inner -->
+
+      <!-- controls the left and right arrows for the carousel -->
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a> <!-- left carousel-control -->
+
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a> <!-- right carousel-control -->
+    
+    </div> <!-- carousel -->
+
+
+
+    <!-- ============================= Democrat and Republican party info ========================================= -->
+    
+    <!-- Wraps the rest of the page i a container to center all the content. -->
+    <div class="container marketing">
+
+      <!-- START THE FEATURETTES -->
+      <!-- dividing line between featurettes -->
+      <hr class="featurette-divider">
+
+      <!-- political party overview -->
+      <div class="row featurette">
+        <div class="col-md-11">
+
+          <!-- sets image to e pluribus unum -->
+          <img class="col-md-4" data-src="holder.js/300x300/auto" alt="#" src="Images/uspoliticalparties.png" data-holder-rendered="true">
+          <h2 class="featurette-heading">Political Parties: <span class="text-muted">What Do They Stand For?</span></h2>
+          <p class="lead">Political parties are traditionally a group of voters who support similar causes or public policies, and who aim to elect an official into office who stands for the views which they collectively believe. The question now remains, what do the major political parties in the United States stand for?
+          <br><br>
+
+          <!-- page jumps to each of the political parties detailed below -->
+          •&nbsp;<a href = "#democrat">The Democratic Party</a><br>
+          •&nbsp;<a href = "#republican">The Republican Party</a><br>
+          •&nbsp;<a href = "#green">The Green Party</a><br>
+          •&nbsp;<a href = "#constitution">The Constitution Party</a><br>
+          •&nbsp;<a href = "#libertarian">The Libertarian Party</a><br>
+          </p> <!-- lead -->
+        </div> <!-- col-md-11 -->
+      </div> <!-- row featurette -->
+
+      <!-- sets link for democrat page jump -->
+      <a name = "democrat"></a>
+
+      <!-- dividing line between featurettes -->
+      <hr class = "featurette-divider">
+
+      <!-- The Democratic Party -->
+      <div class="row featurette">
+        <div class="col-md-11">
+
+          <!-- sets image to democratic donkey -->
+          <img class="col-md-4" data-src="holder.js/300x300/auto" alt="Democratic donkey" src="Images/dem_donkey.png" data-holder-rendered="true">
+          <h2 class="featurette-heading">The Democratic Party: <span class="text-muted">What is it?</span></h2>
+          <p class="lead">Originally, the Democratic and Republican parties were a single party known as the Democratic-Republican Party, created by James Madison and Thomas Jefferson in 1791 to oppose the Federalist Party. This united party aimed to prevent the United States government from becoming a monarchy. After the War of 1812, the Federalist Party disbanded, and the Democrat-Republican Party was left as the only major political party in the country. In 1828, the Democratic-Republican party split into the Democratic Party and the Whig Party, which was a politically active party in the 19th century.<br><br><br><br>
+
+          <b>Economic Policies:</b><br>
+          The Democratic Party aims to increase the minimum wage and advocate for universal health care (think The Affordable Care Act). This party favors the improvement of public education by increasing schooling standards and expanding access to education. Many prominent Democrats have supported reforming the student loans system in an effort to reduce student loan debt and lower tuition fees (with some avocating for tuition-free college).<br><br>
+
+          <b>Environmental Policies:</b><br>
+          Democrats have a history of environmentalism, and the belief that the government should be responsible for the protection of the environment. They favor expansion of conservation lands and open space to improve air quality and reduce highway congestion. Climate change is a large problem for this party, who strongly advocate for the regulation of greenhouse gases. To combat this, they have increasingly begun supporting renewable energy sources.<br><br>
+
+          <b>Social Policies:</b><br>
+          While the original Democratic Party supported slavery, the modern Democratic Party now emphasizes social equality. Voting rights and minority rights are widely supported throughout this political party, including the rights of the LGQBT community, same-sex marriage, civil rights, and equal opportunity. Anti-racism is a core philosophy for the Democratic Party, and they support affirmative action programs to help further equal opportunity. Democrats also support eliminating gerrymandering from the electoral system. A widespread belief is that all women should have access to birth control. The Democratic Party supports governmental and public funding of contraceptives, and are generally pro-choice. Democrats seek to improve the immigration system and allow those who legally enter the U.S. a comprehensive path towards legal citizenship. Gun control is advocated, however some Democrats feel that there are currently too many restrictions concerning firearms. The Democratic Party does not support the death penalty and have attempted to overturn capital punishment.<br><br>
+
+          Does this sound like you? Register to vote as a Democrat <a href = "https://www.usa.gov/register-to-vote">here</a>.
+          </p><!-- lead -->
+
+          <!-- include a link to the top of the page -->
+          <h6 class="pull-xs-right"><a href="#">Back to top</a></h6>
+        </div> <!-- col-md-11 -->
+      </div> <!-- row featurette -->
+
+      <!-- sets link for republican page jump -->
+      <a name = "republican"></a>
+
+      <!-- dividing line between featurettes -->
+      <hr class = "featurette-divider">
+
+      <!-- The Republican Party -->
+      <div class="row featurette">
+        <div class="col-md-11">
+
+          <!-- sets image to republican elephant -->
+          <img class="col-md-4" data-src="holder.js/300x300/auto" alt="Republican elephant" src="Images/rep_elephant.png" data-holder-rendered="true">
+          <h2 class="featurette-heading">The Republican Party: <span class="text-muted">What is it?</span></h2>
+          <p class="lead">The Republican Party was founded on 20 March 1854 in response to the issue of slavery. They were opposed to the spread of slavery in western territories, and Northerners were rapidly joining this new political party because of this. Throughout the years the Republican Party has changed their views in response to demographic, ideological, and social changes. The beliefs of the party have become more conservative as their representation in the South has grown, in an attempt to approach and appease their main demographic.<br><br><br>
+
+          <b>Economic Policies:</b><br> 
+          The Republican Party widely advocates supply side economics, or the theory that lower tax rates actually increase the growth of the economy. They in turn tend to oppose progressive taxes, or tax rates that increase based on income. Their belief is that private spending should be held in higher favor than government spending. Government-led assistance programs are seen to cause government dependecy, and therefore frowned upon. Republicans believe that corporations should be able to establish their own benefits and wages, allowing these factors to be determined by the free market instead of the government. This party is typically opposed to increasing the minimum wage, feeling that this added cost to businesses would cause them to increase the prices of their products in order to maintain revenue as well as cut and outsource jobs.<br><br>
+
+          <b>Environmental Policies:</b><br>
+          The Republican Party was seen to support environmental protection around the eras of Theodore Roosevelt and Richard Nixon. However since the Reagan administration, Republicans have been steadily moving away from environmental regulations and actually taking stances against them.<br><br>
+
+          <b>Foreign Policies:</b><br>
+          Foreign policy is not as concrete of an ideal in the Republican Party. Some believe that the United States should have the ability to act singularly in terms of national defense. In other words, the United States should not have to depend on others to defend their country. In order to maintain national security, many in the Republican Party also advocate for restricting foreign aid and focusing more on the internal issues facing the nation.<br><br>
+
+          <b>Social Policies:</b><br>
+          The Republican Party is generally in-line with social conservative policy, or upholding traditional values. A large majority of the Republican Party is pro-life, and favor banning abortions without exception (though many are willing to make exceptions for incest, rape, or risk of the mother's life). Government-funded abortions are frowned upon. Affirmative action is seen as counter-productive and only serves to further promote discrimination.. Gun ownership is generally supported and gun regulation opposed. Historically, Republicans have supported the War on Drugs and advocated against the legalization of drugs. However, these views may be changing as more Republican figureheads are seen advocating for the reform of mandatory drug sentencing laws. A historic view of the Republican Party that seems to remain relatively constant, however, is the opposition towards same-sex marriage.<br><br>
+
+          Does this sound like you? If so, register as a Republican <a href = "https://www.register.gop">here</a>
+          </p>. <!-- lead -->
+
+          <!-- include a link to the top of the page -->
+          <h6 class="pull-xs-right"><a href="#">Back to top</a></h6>
+        </div> <!-- col-md-11 -->
+      </div> <!-- row featurette -->
+
+      <!-- setslink for green party page jump -->
+      <a name = "green"></a>
+
+      <!-- dividing line between featurettes -->
+      <hr class="featurette-divider">
+
+      <!-- The Green Party -->
+      <div class="row featurette">
+        <div class="col-md-11">
+
+          <!-- sets image to green party emblem -->
+          <img class="col-md-4" data-src="holder.js/300x300/auto" alt="Democratic donkey" src="Images/green_party.png" data-holder-rendered="true">
+          <h2 class="featurette-heading">The Green Party: <span class="text-muted">What is it?</span></h2>
+          <p class="lead">The Green Party of the United States was founded in May of 1984 with the goal of forming a "Green political organizaion in the USA." The U.S. party was inspired by the West German version of the Green Party, whose four pillars included ecology, social justice, grassroots democracy, and non-violence. The Ten Key Values that the U.S. party follows were created at their first Green meeting. Greens in different states eventually formed their own Green parties, each modifying and adopting their own version of the original Ten Key Values, but the essential ideals remain.<br><br><br><br>
+
+          <b>The Ten Key Values</b><br><br>
+             1. Grassroots&nbsp;Democracy: Everyone deserves a say in their own decisions, and should not be forced to do something by another. Public representatives should be fully accountable to the people who elect them.<br><br>
+
+             2. Social&nbsp;Justice and Equal&nbsp;Opportunity: Everyone should have the right to benefit equally from the resources offered by society and the environment. Barriers such as racism, class oppression, sexism, homophobia, ageism, and disability should be internally confronted and stopped.<br><br>
+
+             3. Ecological&nbsp;Wisdom: Society must understand that we are a part of nature, and must therefore maintain an ecological balance and live within our resources in such a way that future generations will not suffer.<br><br>
+
+             4. Non&#8209;Violence: Society must work to demilitarize and eliminate weapons of mass destruction, without being naive about the intentions of other governments.<br><br>
+
+             5. Decentralization: People should restructure social, political, and economic institutions away from a system which is controlled by and mostly benefits the powerful few, towards a system that is more democratic and less bureaucratic.<br><br>
+
+             6. Community&nbsp;Based&nbsp;Economics: Humanity needs to encourage employee ownership and workplace democracy by redesigning our work structures and developing new economic activities. Some form of basic economic security should be established and open to all, and the size and concentrated power of corporations should be reduced without discouraging technical innovations.<br><br>
+
+             7. Feminism and Gender&nbsp;Equity: Human values such as equity between the sexes, interpersonal responsibility, and honesty must be developed with moral conscience. Differences of opinion and gender should be recognized and respected.<br><br>
+
+             8. Respect for Diversity: It is important to value cultural, ethnic, racial, sexual, religious, and spiritual diversity; and to promote the development of respectful relationships between these diversities. The Green Party supports the leadership of people who have been traditionally closed out of leadership roles and acknowledge and encourage respect for other life forms than our own and the preservation of biodiversity.<br><br>
+
+             9. Personal and Global&nbsp;Responsibility: The Green Party encourages individuals to act to improve their personal well-being and, at the same time, to enhance ecological balance and social harmony. This party also seeks to join with people and organizations across the world to foster peace, economic justice, and the health of the planet.<br><br>
+
+             10. Future&nbsp;Focus and Sustainability: Actions and policies should be motivated by long-term goals. The Green Party seeks to protect valuable natural resources, safely disposing of (or "unmaking") all waste created, while developing a sustainable economic system that does not depend on continual expansion for survival. The drive for short-term profits must be counterbalanced by assuring that economic development, new technologies, and fiscal policies are responsible to future generations who will inherit the results of those actions. The quality of life must be the focus of future thinking.<br><br>
+
+             For more details, visit the <a href = "http://www.gp.org/four_pillars_10_kv">Green Party website</a>.<br>
+          </p> <!-- include a link to the top of the page -->
+
+          <!-- include a link to the top of the page -->
+          <h6 class="pull-xs-right"><a href="#">Back to top</a></h6>
+        </div> <!-- col-md-11 -->
+      </div> <!-- row featurette -->
+
+      <!-- sets link for constitution party page jump -->
+      <a name = "constitution"></a>
+
+      <!-- dividing line between featurettes -->
+      <hr class="featurette-divider">
+
+      <!-- The Constitution Party -->
+      <div class="row featurette">
+        <div class="col-md-11">
+
+          <!-- sets image to constitution party emblem -->
+          <img class="col-md-4" data-src="holder.js/300x300/auto" alt="Democratic donkey" src="Images/constitution_party.png" data-holder-rendered="true">
+          <h2 class="featurette-heading">The Constitution Party: <span class="text-muted">What is it?</span></h2>
+          <p class="lead">The Constitution Party was founded by Howard Phillips in 1991 as the "U.S Taxpayer's Party". The party changed their name to the Constitution Party in 1999. The Constitution Party centers on the belief that the United States is a Christian state founded on the basis of the Bible and that the law of the United States should be restored to its Biblical foundations. However, the party does not oppose the constitutional ban on religious tests for holding public office. The Constitution Party bases its platform on their Seven Principles, which read as follows:<br><br><br>
+
+          <b>The&nbsp;Seven&nbsp;Principles:</b><br>
+          1. Life: Life for all human beings: from conception to natural death.<br>
+          2. Liberty: Freedom of conscience and actions for the self&#8209;governed individual.<br>
+          3. Family: One husband and one wife with their children, as divinely instituted.<br>
+          4. Property: Each individual's right to own and steward personal property without government burden.<br>
+          5. Constitution: The Founding Documents interpreted according to the Actual Intent of the Founding Fathers.<br>
+          6. State's&nbsp;Rights: Everything not specifically delegated by the Constitution to the federal government, nor prohibited by the Constitution to the states, is reserved to the states or to the people.<br>
+          7. American&nbsp;Sovereignty: American government committed to the protection of the borders, trade, and common defense of Americans, with no entanglement in foreign alliances.<br><br>
+
+          <b>Economic Policies:</b><br>
+          Only the duties specifically assigned to the federal government by the Constitution (namely those designed to safeguard the God-given rights of citizens - life, liberty, and property) should be funded, and the powers, programs, and sources of revenue that the federal government has usurped should be returned to the states. The government should eliminate debt by not spending more than collected revenue, paying interest as it accrues, selling certain lands and other federal assets - including foreign military bases, and not becoming involved in constant wars. The Constitutional government, as the founders envisioned it, was not imperial. The constitution forbade the States from accepting any currency othen than that which is Gold and Silver based, and the Constitution Party states that it is necessary to return to the monetary system set forth in the Constitution, as well as repeal the Federal Reserve Act and prohibit fractional reserve banking. The Constitution grants no authority to the federal government to administrate a Social Security system, and individuals should have the right to choose between private retirement and pension programs, either at their place of employment or independently. The Internal Revenue Service should be abolished, as it is an unconstitutional Federal assumption of direct taxing authority, and the government does not have the authority to set wages and prices.<br><br>
+
+          <b>Environmental Policies:</b><br>
+          Humanity has a responsibility to be prudent, productive, and efficient stewards of God's natural resources, and we are commanded to be fruitful and multiple, while replensihing and developing the Earth. The Constitution Party supports realistic efforts to preserve the environment and reduce pollution. The party holds the beliefs that the federal government should return to the states and people all lands which are held without authorization by the Constitution and that the Endangered Species Act should be repealed, as well as any environmental treaties which destroy American sovereignty and right to private property.<br><br>
+
+          <b>Foreign Policies:</b><br>
+          American should not participate in any form of world government organization, including the United Nations. The United States government should be prohibited from entering any treaty or other agreement which makes any commitment of American military forces or tax money, compromises the sovereignty of the United States, or accomplishes a purpose properly the subject of domestic law. The United States shall never again employ troops on any foreign field of battle without a declaration of war from Congress. The Monroe Doctrine is supported by the Constitutional Party and they believe that foreign aid programs should be abolished, as they are unconstitutional and are causing further debt.<br><br>
+
+          <b>Social Policies:</b><br>
+          Education is related to basic assumptions about God and man, and therefore cannot be separated from religious faith. Education should be free from all federal government subsidies, including vouchers, tax incentives, and loans, except with respect to veterans. The law of the Creator defines marriage as the union between one man and one woman, a belief held strongly by this party. The right to bear arms is a guaranteed right by the Second Amendment to the Constitution, and may not be fringed upon or denied. The governmentalization and bureaucratization of American medicine is heavily opposed, and hospitals, doctors, and other health care providers should be accountable to patients, not politicians. The Constitution Party also opposes abortion completely, with no exceptions. The integrity of the international borders of the United States are a duty of the federal government to guard and protect, including the regulation of the numbers and qualifications of immigrants into the country.<br><br>
+
+          For more information, visit the <a href = "https://www.constitutionparty.com/our-principles/platform-and-resolutions/">Constitution Party website</a>.
+          </p> <!-- lead -->
+
+          <!-- include a link to the top of the page -->
+          <h6 class="pull-xs-right"><a href="#">Back to top</a></h6>
+        </div> <!-- col-md-11 -->
+      </div> <!-- row featurette -->
+
+      <!-- sets link for libertarian party page jump -->
+      <a name = "libertarian"></a>
+
+      <!-- dividing line between featurettes -->
+      <hr class="featurette-divider">
+
+      <!-- The Libertarian Party -->
+      <div class="row featurette">
+        <div class="col-md-11">
+
+          <!-- sets image to libertarian party emblem -->
+          <img class="col-md-4" data-src="holder.js/300x300/auto" alt="Democratic donkey" src="Images/libertarian_party.png" data-holder-rendered="true">
+          <h2 class="featurette-heading">The Libertarian Party: <span class="text-muted">What is it?</span></h2>
+          <p class="lead">The Libertarian Party of the United States was founded on 11 December 1971 in Colorado Springs. The party was founded partially due to price controls and the end of the Gold Standard implemented by the Nixon administration. This party defends the rights of the individual and holds that they have the right to live however they choose, so long as they do not forcibly interfere with the equal right of others to do the same. This party holds to the belief that the government must not violate the rights of any individual; namely, the rights to life, liberty of speech, and property.<br><br><br><br>
+
+          <b>Social Policy:</b><br>
+          Government censorship is opposed, both in religious aspects as well as public speech. The government should be transparent in its actions, and should not be allowed to authorize unreasonable search and seizure. Sexual orientation, preference, gender, or gender identity should have no impact on the government's treatment of individuals. The government does not have the right to define, llicense, or restrict personal relationships. Consenting adults should be free to choose their own sexual practices and personal relationships. The government should also be kept out of abortion, leaving the question to each person for their own individual and conscientious consideration. Criminal laws should be limited to violations of rights of others through force or fraud, or deliberate actions that place others at significant risk of harm without consent. The constitutional rights of the criminally accused must be upheld, and the death penalty should be abolished. The only legitimate use of force is in defense of life, liberty, and justly acquired property against aggression. Individuals should have the right to bear arms, and the government should not restrict the registration, monitoring, manufacture, and transferrence of firearms or ammunition. Education is best provided by the free&#8209;market, and should have more diversity of choice. A free&#8209;market health care system is also favored. Individuals should have the freedom to choose the level of health care they want, the care providers they want, the medicines and treatments they will use, and all other aspects of health care, including end&#8209;of&#8209;life decisions. People should also be free to purchase health insurance across state lines. Retirement planning is the responsibility of the individual, not the government. The government&#8209;sponsored Social Security system should be replaced with a private voluntary system.<br><br>
+
+          <b>Economic Policy:</b><br>
+          All members of society should have abundant opportunities to achieve economic success. A free and competitive market allocates resources efficiently, and the only role the government should play in this is the protection of property rights, the adjudication of disputes, and the providing of a legal framework to protect voluntary trade. They should not have the right to redistribute wealth or control or manage trade. The freedom to obtain, retain, profit from, manage, or dispose of one's property must be upheld. The government should not be able to place restrictions on the rights to control and enjoy one's property, so long as one's choices do not harm or infringe on the rights of others. Income tax should be repealed, and the Internal Revenue Service abolished. The government should not incur debt which burdens future generations without their consent. The budget should be balanced by cutting expenditures, not by raising taxes. Free-markets are favored, with individuals given the right to form corporations, cooperatives, and other entities based on voluntary asssociation. The government should not compete with private enterprises. <br><br>
+
+          <b>Environmental Policy:</b><br>
+          Protecting the environment requires a clear definition and enforcement of individual rights and responsibilities regarding resources like land, water, air, and wildlife. The government should not be subsidizing any particular form of energy or controlling energy pricing, allocation, or production. 
+          <br><br>
+
+          <b>Foreign Policy:</b><br>
+          The only purpose of the government should be to protect individual rights. The military should be maintained to a size sufficient to defend the United States against aggression, but the United States itself should avoid entangling alliances and abandon its attempts to act as policeman for the world. The defense of the country requires adequate intelligence to detect and counter threats to domestic security, but the Constitution and the Bill of Rights must always be upheld, even during wartime. Intelligence agencies must be completely transparent with their country, and the goverrnment should not use secret classifications to withhold public information, especially that which shows illegal activity on behalf of the government. American foreign policy should seek America at peace with the world. Foreign policy should emphasize defense and avoid foreign entanglement and intervention. Political freedom and escape from tyranny demand that individuals not be unreasonably constrained by government in the crossing of political boundaries, but the United States should have control over the entry of those who pose a credible threat to security, health, or property. <br><br>
+
+          For more information, visit the <a href = "https://www.lp.org/issues">Libertarian Party website</a>.<br>
+          Does this sound like you? If so, register to vote as a Libertarian <a href = "http://www.lp.org/action/register-to-vote">here</a>.
+          </p> <!-- lead -->
+
+          <!-- include a link to the top of the page -->
+          <h6 class="pull-xs-right"><a href="#">Back to top</a></h6>
+        </div> <!-- col-md-11 -->
+      </div> <!-- row featurette -->
+
+      <!-- dividing line between featurettes -->
+      <hr class="featurette-divider">
+
+      <!-- /END THE FEATURETTES -->
+
+
+      <!-- FOOTER -->
+      <footer>
+        <h6>&copy; 2016 Girls Who Code <!--&middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a>--></h6>
+      </footer>
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
+<!--     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+ -->    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="../../assets/js/vendor/holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
