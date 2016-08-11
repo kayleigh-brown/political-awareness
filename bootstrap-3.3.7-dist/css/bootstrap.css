@@ -1946,7 +1946,7 @@ pre code {
 }
 @media(max-width: 480px) {
   h1 {
-    font-size: 12pt;
+    font-size: 30pt;
   }
 }
 @media (min-width: 992px) {
