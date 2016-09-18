@@ -1301,7 +1301,7 @@ p {
 }
 @media (min-width: 1000px) {
   .lead {
-    font-size: 21px;
+    font-size: 16px;
   }
 }
 small,
